@@ -1,0 +1,11 @@
+module signal_generation(clk,led)
+
+
+
+
+
+
+
+
+
+endmodule

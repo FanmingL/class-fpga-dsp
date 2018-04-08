@@ -1,0 +1,14 @@
+module lcd_module(
+						clk,
+						lcd);
+						
+						
+	input clk;
+	output wire[3:0]lcd;
+	reg LCD_CS, LCD_A0, LCD_SCL, LCD_SI;
+						
+						
+						
+endmodule
+
+				

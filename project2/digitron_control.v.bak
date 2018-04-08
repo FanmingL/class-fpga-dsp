@@ -1,0 +1,16 @@
+module digitron_control(clk,
+								KEY_STATE,
+								point_position, 
+								shank_position
+								number_to_show);
+input clk;
+input wire[9:0] KEY_STATE;
+output reg[5:0]point_position, shank_position;
+output reg[19:0]number_to_show;
+
+
+
+
+
+
+endmodule

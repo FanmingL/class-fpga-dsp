@@ -1,0 +1,99 @@
+module digitron_module(
+								clk,					//1K clk
+								number_to_show,
+								DIG,					//8 DIGs
+								SEL
+								);
+									
+	input wire clk;								
+	input wire[35:0]number_to_show;
+	output reg[7:0] DIG;
+	output reg[5:0] SEL;			
+	reg [3:0]number_to_show_reg [0:5];
+	reg [5:0]point_position;
+	reg [3:0]index_number;
+	reg [5:0]shank_position;
+	reg [7:0]dig_tmp;
+	reg [15:0]shank_period;
+	reg [15:0]shank_count;
+	reg shank_flag;
+	initial begin
+		index_number <= 0;
+		dig_tmp <= 8'b00000000;
+		shank_period <= 300;
+		shank_count <= 0;
+	end
+	
+	always @ (posedge clk)begin
+		shank_count <= shank_count + 1;
+		if (shank_count == shank_period)begin
+			shank_count <= 0;
+			shank_flag <= ~shank_flag;
+		end
+	end
+	
+	always @ (posedge clk) begin
+		number_to_show_reg[0] = number_to_show[3:0];
+		number_to_show_reg[1] = number_to_show[7:4];
+		number_to_show_reg[2] = number_to_show[11:8];
+		number_to_show_reg[3] = number_to_show[15:12];
+		number_to_show_reg[4] = number_to_show[19:16];
+		number_to_show_reg[5] = number_to_show[23:20];
+		point_position = number_to_show[29:24];
+		shank_position = number_to_show[35:30];
+	end
+				
+	always @ (posedge clk) begin
+		if (index_number == 5) begin
+			index_number = 0;
+		end
+		else begin
+			index_number = index_number + 1;
+		end
+		SEL = ~(6'b000001 << (index_number));	
+		if (((6'b000001 << (index_number))&shank_position)&&shank_flag)begin
+			SEL = ~(6'b000000);	
+		end
+		
+		
+		case(number_to_show_reg[5-index_number])
+		4'b0000:begin					//0
+			dig_tmp = 8'b00111111;
+		end
+		4'b0001:begin					//1
+			dig_tmp = 8'b00000110;
+		end
+		4'b0010:begin					//2
+			dig_tmp = 8'b01011011;
+		end
+		4'b0011:begin					//3
+			dig_tmp = 8'b01001111;
+		end
+		4'b0100:begin					//4
+			dig_tmp = 8'b01100110;
+		end
+		4'b0101:begin					//5
+			dig_tmp = 8'b01101101;
+		end
+		4'b0110:begin					//6
+			dig_tmp = 8'b01111101;
+		end
+		4'b0111:begin					//7
+			dig_tmp = 8'b00000111;
+		end
+		4'b1000:begin					//8
+			dig_tmp = 8'b01111111;
+		end
+		4'b1001:begin					//9
+			dig_tmp = 8'b01101111;
+		end
+		endcase
+		if ((6'b000001 << (5-index_number))&(point_position))begin
+			dig_tmp = dig_tmp| 8'b10000000;
+		end
+		DIG = ~dig_tmp;
+	end
+
+	
+endmodule
+								

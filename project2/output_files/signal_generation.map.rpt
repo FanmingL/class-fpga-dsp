@@ -1,0 +1,480 @@
+Analysis & Synthesis report for signal_generation
+Mon Apr 09 01:50:17 2018
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |signal_generation|digitron_control:digitron_control_instance|FSM
+  9. State Machine - |signal_generation|lcd_module:lcd_module_instance|step
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "decrease_clock:decrease_clock_instance"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Apr 09 01:50:16 2018      ;
+; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                      ; signal_generation                          ;
+; Top-level Entity Name              ; signal_generation                          ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 995                                        ;
+;     Total combinational functions  ; 791                                        ;
+;     Dedicated logic registers      ; 494                                        ;
+; Total registers                    ; 494                                        ;
+; Total pins                         ; 29                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE15F17C8       ;                    ;
+; Top-level entity name                                                      ; signal_generation  ; signal_generation  ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; key_module.v                     ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/key_module.v        ;         ;
+; digitron_module.v                ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/digitron_module.v   ;         ;
+; signal_generation.v              ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/signal_generation.v ;         ;
+; decrease_clock.v                 ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/decrease_clock.v    ;         ;
+; led_module.v                     ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/led_module.v        ;         ;
+; lcd_module.v                     ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/lcd_module.v        ;         ;
+; digitron_control.v               ; yes             ; User Verilog HDL File  ; C:/altera/14.1/project2/digitron_control.v  ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                  ;
++---------------------------------------------+------------------------------------------------+
+; Resource                                    ; Usage                                          ;
++---------------------------------------------+------------------------------------------------+
+; Estimated Total logic elements              ; 995                                            ;
+;                                             ;                                                ;
+; Total combinational functions               ; 791                                            ;
+; Logic element usage by number of LUT inputs ;                                                ;
+;     -- 4 input functions                    ; 267                                            ;
+;     -- 3 input functions                    ; 309                                            ;
+;     -- <=2 input functions                  ; 215                                            ;
+;                                             ;                                                ;
+; Logic elements by mode                      ;                                                ;
+;     -- normal mode                          ; 455                                            ;
+;     -- arithmetic mode                      ; 336                                            ;
+;                                             ;                                                ;
+; Total registers                             ; 494                                            ;
+;     -- Dedicated logic registers            ; 494                                            ;
+;     -- I/O registers                        ; 0                                              ;
+;                                             ;                                                ;
+; I/O pins                                    ; 29                                             ;
+;                                             ;                                                ;
+; Embedded Multiplier 9-bit elements          ; 0                                              ;
+;                                             ;                                                ;
+; Maximum fan-out node                        ; decrease_clock:decrease_clock_instance|clk_out ;
+; Maximum fan-out                             ; 334                                            ;
+; Total fan-out                               ; 3921                                           ;
+; Average fan-out                             ; 2.92                                           ;
++---------------------------------------------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; |signal_generation                              ; 791 (0)           ; 494 (0)      ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |signal_generation                                            ; work         ;
+;    |decrease_clock:decrease_clock_instance|     ; 104 (104)         ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|decrease_clock:decrease_clock_instance     ; work         ;
+;    |digitron_control:digitron_control_instance| ; 188 (188)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_control:digitron_control_instance ; work         ;
+;    |digitron_module:digitron_module_instance|   ; 221 (221)         ; 157 (157)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_module:digitron_module_instance   ; work         ;
+;    |key_module:key_module_instance|             ; 273 (273)         ; 203 (203)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|key_module:key_module_instance             ; work         ;
+;    |lcd_module:lcd_module_instance|             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance             ; work         ;
+;    |led_module:led_module_instance|             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|led_module:led_module_instance             ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------+
+; State Machine - |signal_generation|digitron_control:digitron_control_instance|FSM ;
++-----------+-----------+-----------+-----------+-----------+-----------------------+
+; Name      ; FSM.00011 ; FSM.00010 ; FSM.00001 ; FSM.00000 ; FSM.00100             ;
++-----------+-----------+-----------+-----------+-----------+-----------------------+
+; FSM.00000 ; 0         ; 0         ; 0         ; 0         ; 0                     ;
+; FSM.00001 ; 0         ; 0         ; 1         ; 1         ; 0                     ;
+; FSM.00010 ; 0         ; 1         ; 0         ; 1         ; 0                     ;
+; FSM.00011 ; 1         ; 0         ; 0         ; 1         ; 0                     ;
+; FSM.00100 ; 0         ; 0         ; 0         ; 1         ; 1                     ;
++-----------+-----------+-----------+-----------+-----------+-----------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------+
+; State Machine - |signal_generation|lcd_module:lcd_module_instance|step ;
++---------------+--------------------------------------------------------+
+; Name          ; step.00010000                                          ;
++---------------+--------------------------------------------------------+
+; step.00000000 ; 0                                                      ;
+; step.00010000 ; 1                                                      ;
++---------------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++---------------------------------------------------+---------------------------------------------+
+; Register name                                     ; Reason for Removal                          ;
++---------------------------------------------------+---------------------------------------------+
+; digitron_control:digitron_control_instance|beep   ; Stuck at VCC due to stuck port data_in      ;
+; digitron_control:digitron_control_instance|FSM~7  ; Lost fanout                                 ;
+; digitron_control:digitron_control_instance|FSM~8  ; Lost fanout                                 ;
+; digitron_control:digitron_control_instance|FSM~10 ; Lost fanout                                 ;
+; digitron_control:digitron_control_instance|FSM~11 ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~4             ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~5             ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~6             ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~7             ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~9             ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~10            ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step~11            ; Lost fanout                                 ;
+; lcd_module:lcd_module_instance|step.00010000      ; Stuck at GND due to stuck port data_in      ;
+; lcd_module:lcd_module_instance|LCD_CS             ; Stuck at VCC due to stuck port clock_enable ;
+; Total Number of Removed Registers = 14            ;                                             ;
++---------------------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++----------------------------------------------+---------------------------+----------------------------------------+
+; Register name                                ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------------------------------+---------------------------+----------------------------------------+
+; lcd_module:lcd_module_instance|step.00010000 ; Stuck at GND              ; lcd_module:lcd_module_instance|LCD_CS  ;
+;                                              ; due to stuck port data_in ;                                        ;
++----------------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 494   ;
+; Number of registers using Synchronous Clear  ; 48    ;
+; Number of registers using Synchronous Load   ; 66    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 311   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; lcd_module:lcd_module_instance|LCD_SCL                         ; 2       ;
+; digitron_control:digitron_control_instance|set_number_index[0] ; 9       ;
+; digitron_control:digitron_control_instance|set_number_index[2] ; 7       ;
+; digitron_control:digitron_control_instance|start_time[4]       ; 3       ;
+; digitron_control:digitron_control_instance|start_time[6]       ; 3       ;
+; digitron_control:digitron_control_instance|start_time[7]       ; 3       ;
+; digitron_control:digitron_control_instance|start_time[9]       ; 3       ;
+; digitron_control:digitron_control_instance|start_time[8]       ; 3       ;
+; digitron_control:digitron_control_instance|start_time[10]      ; 3       ;
+; Total number of inverted registers = 9                         ;         ;
++----------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |signal_generation|decrease_clock:decrease_clock_instance|clk_count[18]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|binary_bcd_count[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[27]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[23]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[35]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[32]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[43]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[40]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|lf_count[3]       ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|start_time[16]    ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|number_to_show[3] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[5] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[1] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[3] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|start_time[4]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux2                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |signal_generation|digitron_control:digitron_control_instance|set_number_index  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |signal_generation|digitron_control:digitron_control_instance|set_number_index  ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |signal_generation|digitron_control:digitron_control_instance|start_time        ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux9                ;
+; 12:1               ; 5 bits    ; 40 LEs        ; 25 LEs               ; 15 LEs                 ; No         ; |signal_generation|digitron_control:digitron_control_instance|Selector1         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decrease_clock:decrease_clock_instance"                                                         ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; system_time_ms   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; system_time_ms10 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 29                          ;
+; cycloneiii_ff         ; 494                         ;
+;     ENA               ; 239                         ;
+;     ENA SCLR          ; 6                           ;
+;     ENA SCLR SLD      ; 10                          ;
+;     ENA SLD           ; 56                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 151                         ;
+; cycloneiii_lcell_comb ; 793                         ;
+;     arith             ; 336                         ;
+;         2 data inputs ; 143                         ;
+;         3 data inputs ; 193                         ;
+;     normal            ; 457                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 116                         ;
+;         4 data inputs ; 267                         ;
+;                       ;                             ;
+; Max LUT depth         ; 17.70                       ;
+; Average LUT depth     ; 5.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Mon Apr 09 01:50:00 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off signal_generation -c signal_generation
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file key_module.v
+    Info (12023): Found entity 1: key_module
+Info (12021): Found 1 design units, including 1 entities, in source file digitron_module.v
+    Info (12023): Found entity 1: digitron_module
+Info (12021): Found 1 design units, including 1 entities, in source file signal_generation.v
+    Info (12023): Found entity 1: signal_generation
+Info (12021): Found 1 design units, including 1 entities, in source file decrease_clock.v
+    Info (12023): Found entity 1: decrease_clock
+Info (12021): Found 1 design units, including 1 entities, in source file led_module.v
+    Info (12023): Found entity 1: led_module
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_module.v
+    Info (12023): Found entity 1: lcd_module
+Info (12021): Found 1 design units, including 1 entities, in source file digitron_control.v
+    Info (12023): Found entity 1: digitron_control
+Info (12127): Elaborating entity "signal_generation" for the top level hierarchy
+Info (12128): Elaborating entity "decrease_clock" for hierarchy "decrease_clock:decrease_clock_instance"
+Info (12128): Elaborating entity "key_module" for hierarchy "key_module:key_module_instance"
+Info (12128): Elaborating entity "led_module" for hierarchy "led_module:led_module_instance"
+Info (12128): Elaborating entity "lcd_module" for hierarchy "lcd_module:lcd_module_instance"
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(13): object "command" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(13): object "data" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(14): object "col" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(14): object "page" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(15): object "data_to_write" assigned a value but never read
+Info (12128): Elaborating entity "digitron_module" for hierarchy "digitron_module:digitron_module_instance"
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(40): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(57): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(60): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(66): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(69): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(72): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(75): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(78): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at digitron_module.v(103): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "digitron_control" for hierarchy "digitron_control:digitron_control_instance"
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(91): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(98): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(111): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(147): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(150): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(158): truncated value with size 32 to match size of target (20)
+Warning (10230): Verilog HDL assignment warning at digitron_control.v(161): truncated value with size 32 to match size of target (4)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "beep" is stuck at VCC
+    Warning (13410): Pin "LCD[0]" is stuck at VCC
+    Warning (13410): Pin "LCD[2]" is stuck at VCC
+    Warning (13410): Pin "LCD[3]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/altera/14.1/project2/output_files/signal_generation.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1095 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 1066 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 686 megabytes
+    Info: Processing ended: Mon Apr 09 01:50:17 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/14.1/project2/output_files/signal_generation.map.smsg.
+
+
