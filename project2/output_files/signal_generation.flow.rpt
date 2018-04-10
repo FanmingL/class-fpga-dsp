@@ -1,5 +1,5 @@
 Flow report for signal_generation
-Mon Apr 09 01:50:46 2018
+Tue Apr 10 16:52:03 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 09 01:50:46 2018      ;
+; Flow Status                        ; Successful - Tue Apr 10 16:52:03 2018      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; signal_generation                          ;
 ; Top-level Entity Name              ; signal_generation                          ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE15F17C8                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 835 / 15,408 ( 5 % )                       ;
-;     Total combinational functions  ; 791 / 15,408 ( 5 % )                       ;
-;     Dedicated logic registers      ; 494 / 15,408 ( 3 % )                       ;
-; Total registers                    ; 494                                        ;
-; Total pins                         ; 29 / 166 ( 17 % )                          ;
+; Total logic elements               ; 616 / 15,408 ( 4 % )                       ;
+;     Total combinational functions  ; 576 / 15,408 ( 4 % )                       ;
+;     Dedicated logic registers      ; 430 / 15,408 ( 3 % )                       ;
+; Total registers                    ; 430                                        ;
+; Total pins                         ; 38 / 166 ( 23 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
+; Total memory bits                  ; 16,384 / 516,096 ( 3 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/09/2018 01:50:00 ;
+; Start date & time ; 04/10/2018 16:51:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; signal_generation   ;
 +-------------------+---------------------+
@@ -76,11 +76,12 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 26824500216389.152320980009608        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 26824500216389.152335028009520        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; sin_bb.v                              ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
@@ -96,12 +97,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 672 MB              ; 00:00:35                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 1007 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 611 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 680 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 589 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:54                           ;
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 681 MB              ; 00:00:32                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 1002 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 612 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 678 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 589 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:34     ; --                      ; --                  ; 00:00:49                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
