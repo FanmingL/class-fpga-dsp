@@ -2,148 +2,112 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
+Slack : -88.087
+TNS   : -1953.383
+
 Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -5.736
-TNS   : -631.864
+Slack : -6.578
+TNS   : -674.833
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.144
-TNS   : -218.615
-
-Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -3.507
-TNS   : -262.822
-
-Type  : Slow 1200mV 85C Model Setup 'dac_control:comb_4|clk_out'
-Slack : -0.648
-TNS   : -4.409
+Slack : -4.172
+TNS   : -191.778
 
 Type  : Slow 1200mV 85C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.420
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.433
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : 0.433
+Slack : 0.437
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'dac_control:comb_4|clk_out'
-Slack : 0.907
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.483
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -179.124
+TNS   : -152.358
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.487
-TNS   : -353.906
+TNS   : -395.542
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.487
-TNS   : -148.700
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dac_control:comb_4|clk_out'
-Slack : -1.487
-TNS   : -11.896
-
-Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -5.228
-TNS   : -578.725
-
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.856
-TNS   : -190.376
+TNS   : -316.731
 
 Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -3.229
-TNS   : -239.730
+Slack : -80.623
+TNS   : -1800.409
 
-Type  : Slow 1200mV 0C Model Setup 'dac_control:comb_4|clk_out'
-Slack : -0.519
-TNS   : -3.458
+Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : -5.974
+TNS   : -618.092
 
-Type  : Slow 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : 0.382
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.824
+TNS   : -165.415
 
 Type  : Slow 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.388
+Slack : 0.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : 0.384
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'dac_control:comb_4|clk_out'
-Slack : 0.786
+Slack : 0.553
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -179.124
+TNS   : -152.358
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.487
-TNS   : -353.906
+TNS   : -396.153
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.487
-TNS   : -148.700
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dac_control:comb_4|clk_out'
-Slack : -1.487
-TNS   : -11.896
-
-Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -1.935
-TNS   : -138.015
-
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.173
-TNS   : -41.271
+TNS   : -321.426
 
 Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -0.966
-TNS   : -63.274
+Slack : -37.292
+TNS   : -739.632
 
-Type  : Fast 1200mV 0C Model Setup 'dac_control:comb_4|clk_out'
-Slack : 0.215
+Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : -2.282
+TNS   : -143.343
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.224
+TNS   : -40.965
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.010
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.030
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.058
+Slack : 0.102
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : 0.148
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'dac_control:comb_4|clk_out'
-Slack : 0.392
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -109.650
+TNS   : -90.351
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.000
-TNS   : -238.000
+TNS   : -266.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.000
-TNS   : -100.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dac_control:comb_4|clk_out'
-Slack : -1.000
-TNS   : -8.000
+TNS   : -213.000
 
 ------------------------------------------------------------
