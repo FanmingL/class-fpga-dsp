@@ -1,5 +1,5 @@
 Analysis & Synthesis report for signal_generation
-Mon Apr 16 22:18:06 2018
+Tue Apr 17 13:51:42 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -57,7 +57,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 16 22:18:06 2018      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 17 13:51:42 2018      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; signal_generation                          ;
 ; Top-level Entity Name              ; signal_generation                          ;
@@ -504,7 +504,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[40]       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|shank_position[2]                         ;
 ; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |signal_generation|dac_control:comb_4|step_test[14]                             ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|step_test[5]                              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|step_test[6]                              ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux3                ;
@@ -693,7 +693,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Mon Apr 16 22:17:48 2018
+    Info: Processing started: Tue Apr 17 13:51:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off signal_generation -c signal_generation
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file key_module.v
@@ -716,8 +716,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file dac_con
     Info (12023): Found entity 1: dac_control
 Info (12021): Found 1 design units, including 1 entities, in source file sin.v
     Info (12023): Found entity 1: sin
+Critical Warning (10846): Verilog HDL Instantiation warning at signal_generation.v(40): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at signal_generation.v(41): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at signal_generation.v(42): instance has no name
 Info (12127): Elaborating entity "signal_generation" for the top level hierarchy
 Info (12128): Elaborating entity "decrease_clock" for hierarchy "decrease_clock:decrease_clock_instance"
 Info (12128): Elaborating entity "key_module" for hierarchy "key_module:key_module_instance"
@@ -744,14 +744,14 @@ Info (12128): Elaborating entity "dac_control" for hierarchy "dac_control:comb_4
 Warning (10036): Verilog HDL or VHDL warning at dac_control.v(19): object "out_reg" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at dac_control.v(21): object "step" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at dac_control.v(56): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(85): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(91): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(98): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(111): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(123): truncated value with size 20 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(86): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(92): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(99): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(112): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at dac_control.v(124): truncated value with size 20 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at dac_control.v(135): truncated value with size 20 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(125): truncated value with size 20 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at dac_control.v(136): truncated value with size 20 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at dac_control.v(137): truncated value with size 20 to match size of target (16)
 Warning (10030): Net "exp_number2.data_a" at dac_control.v(27) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "exp_number2.waddr_a" at dac_control.v(27) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "exp_number2.we_a" at dac_control.v(27) has no driver or initial value, using a default initial value '0'
@@ -824,10 +824,10 @@ Info (21057): Implemented 1738 device resources after synthesis - the final reso
     Info (21061): Implemented 1692 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 697 megabytes
-    Info: Processing ended: Mon Apr 16 22:18:06 2018
+    Info: Peak virtual memory: 698 megabytes
+    Info: Processing ended: Tue Apr 17 13:51:42 2018
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

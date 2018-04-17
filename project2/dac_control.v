@@ -61,7 +61,6 @@ always @ (posedge clk_high)begin
 end
 
 always @ (posedge clk_high) begin
-
 	dac_value = q_a;
 end							
 							
@@ -77,12 +76,13 @@ always @ (posedge clk_high)begin
 end
 
 always @ (negedge clk_high)begin
-	if (step_counter >= 200000 - step_test)begin
+	if (step_counter < 200000 - step_test)begin
 		step_counter = step_counter + step_test;
 	end else begin
-		step_counter = step_counter + step_test - 200000;
+		step_counter = step_counter + step_test ;
+		step_counter = step_counter - 200000 ;
 	end
-	address_a = step_counter / 100;
+	address_a = (step_counter / 100);
 end
 
 
