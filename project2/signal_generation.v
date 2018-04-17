@@ -24,7 +24,8 @@ module signal_generation(
 	wire [19:0] number_on_digitron;
 	wire [7:0] dac_value;
 	wire [10:0]address_a, address_b;
-	wire [7:0]q_a,q_b;
+	wire [7:0]q_a,q_b,q;
+	wire [12:0]address;
 	initial begin
 		beep <= 1;
 	end
@@ -33,15 +34,15 @@ module signal_generation(
 	key_module key_module_instance(clk_out, key, KEY_STATE);//UP,DOWN,LEFT,RIGHT,ENTER
 	
 	led_module led_module_instance(clk_out, KEY_STATE, led);
-	lcd_module lcd_module_instance(clk_out_high, LCD);
+	lcd_module lcd_module_instance(clk_out_high, clk_out, LCD, number_on_digitron, address, q);
 
 	digitron_module digitron_module_instance(clk_out_high, clk_out, shank_position_wire, point_position_wire, DIG, SEL, number_on_digitron);
-	//digitron_control digitron_control_instance(clk_out,KEY_STATE, point_position_wire, shank_position_wire, number_on_digitron, beep);
+	digitron_control digitron_control_instance(clk_out,KEY_STATE, point_position_wire, shank_position_wire, number_on_digitron);
 	dac_module(clk_out_high, dac_value, DAC[0], DAC[8:1] );
-	dac_control(clk, clk_out_high, KEY_STATE, q_a, dac_value, number_on_digitron, shank_position_wire, point_position_wire, address_a);
+	//dac_control(clk, clk_out_high, KEY_STATE, q_a, dac_value, number_on_digitron, shank_position_wire, point_position_wire, address_a);
 	
 	sin sin_module(address_a,address_b,clk,q_a,q_b);
-	
+	img (address, clk, q);
 
 
 

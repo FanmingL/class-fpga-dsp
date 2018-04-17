@@ -1,5 +1,5 @@
 EDA Netlist Writer report for signal_generation
-Tue Apr 17 13:52:21 2018
+Tue Apr 17 21:45:25 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr 17 13:52:21 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 17 21:45:25 2018 ;
 ; Revision Name             ; signal_generation                     ;
 ; Top-level Entity Name     ; signal_generation                     ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 17 13:52:18 2018
+    Info: Processing started: Tue Apr 17 21:45:23 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off signal_generation -c signal_generation
 Info (204019): Generated file signal_generation_8_1200mv_85c_slow.vo in folder "C:/altera/14.1/project2/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file signal_generation_8_1200mv_0c_slow.vo in folder "C:/altera/14.1/project2/simulation/modelsim/" for EDA simulation tool
@@ -100,9 +100,9 @@ Info (204019): Generated file signal_generation_8_1200mv_0c_v_slow.sdo in folder
 Info (204019): Generated file signal_generation_min_1200mv_0c_v_fast.sdo in folder "C:/altera/14.1/project2/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file signal_generation_v.sdo in folder "C:/altera/14.1/project2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 593 megabytes
-    Info: Processing ended: Tue Apr 17 13:52:21 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 601 megabytes
+    Info: Processing ended: Tue Apr 17 21:45:25 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

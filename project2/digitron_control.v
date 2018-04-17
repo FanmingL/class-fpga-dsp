@@ -2,13 +2,11 @@ module digitron_control(clk,
 								KEY_STATE,
 								point_position, 
 								shank_position,
-								number_to_show,
-								beep);
+								number_to_show);
 input clk;
 input wire[9:0] KEY_STATE;
 output reg[5:0]point_position, shank_position;
 output reg[19:0]number_to_show;
-output reg beep;
 reg[4:0] FSM;
 reg[3:0] set_number_index;
 reg[3:0] key_used; 
@@ -23,9 +21,9 @@ reg[3:0] lf_count;
 *4: End 
 */
 initial begin
-	point_position <= 6'b000100;    //point position
+	point_position <= 6'b000000;    //point position
 	shank_position <= 6'b000000;    //to select which to shank
-	start_time <= 2000;
+	start_time <= 0;
 	number_to_show <= 0;
 	FSM <= 0;
 	set_number_index <= 5;
@@ -36,16 +34,15 @@ initial begin
 	exp_number[2] <= 1000;
 	exp_number[1] <= 10000;
 	exp_number[0] <= 100000;
-	beep <= 1'b1;
 	
 end
 //FSM control
 always @ (posedge clk) begin
 	case(FSM)
 	0:begin
-		if (KEY_STATE[4]==1&&!KEY_STATE[9])begin
-			FSM = 2;
-		end
+//		if (KEY_STATE[4]==1&&!KEY_STATE[9])begin
+//			FSM = 2;
+//		end
 	end
 	
 	1:begin
@@ -166,12 +163,5 @@ always @ (posedge clk) begin
 	end//if FSM==4
 end
 
-always @ (posedge clk)begin
-	if (FSM == 3)begin
-		//beep = 0;
-	end else begin
-		beep = 1;
-	end
-end
 
 endmodule
