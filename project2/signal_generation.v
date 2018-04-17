@@ -34,7 +34,7 @@ module signal_generation(
 	key_module key_module_instance(clk_out, key, KEY_STATE);//UP,DOWN,LEFT,RIGHT,ENTER
 	
 	led_module led_module_instance(clk_out, KEY_STATE, led);
-	lcd_module lcd_module_instance(clk_out_high, clk_out, LCD, number_on_digitron, address, q);
+	lcd_module lcd_module_instance(clk_out_high, clk_out, LCD, number_on_digitron, address, q, shank_position_wire);
 
 	digitron_module digitron_module_instance(clk_out_high, clk_out, shank_position_wire, point_position_wire, DIG, SEL, number_on_digitron);
 	digitron_control digitron_control_instance(clk_out,KEY_STATE, point_position_wire, shank_position_wire, number_on_digitron);

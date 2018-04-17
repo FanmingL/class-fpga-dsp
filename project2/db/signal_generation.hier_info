@@ -743,6 +743,14 @@ clk => data_quantity_old[28].CLK
 clk => data_quantity_old[29].CLK
 clk => data_quantity_old[30].CLK
 clk => data_quantity_old[31].CLK
+clk => pic_index[0].CLK
+clk => pic_index[1].CLK
+clk => pic_index[2].CLK
+clk => pic_index[3].CLK
+clk => pic_index[4].CLK
+clk => pic_index[5].CLK
+clk => pic_index[6].CLK
+clk => pic_index[7].CLK
 clk => state~6.DATAIN
 clk_low => ~NO_FANOUT~
 lcd[0] <= LCD_CS.DB_MAX_OUTPUT_PORT_TYPE
@@ -790,6 +798,12 @@ q[4] => data.DATAB
 q[5] => data.DATAB
 q[6] => data.DATAB
 q[7] => data.DATAB
+shank_position[0] => Decoder0.IN5
+shank_position[1] => Decoder0.IN4
+shank_position[2] => Decoder0.IN3
+shank_position[3] => Decoder0.IN2
+shank_position[4] => Decoder0.IN1
+shank_position[5] => Decoder0.IN0
 
 
 |signal_generation|digitron_module:digitron_module_instance

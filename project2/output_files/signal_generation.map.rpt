@@ -1,5 +1,5 @@
 Analysis & Synthesis report for signal_generation
-Tue Apr 17 21:44:53 2018
+Tue Apr 17 23:53:03 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -60,15 +60,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 21:44:53 2018      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 17 23:53:03 2018      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; signal_generation                          ;
 ; Top-level Entity Name              ; signal_generation                          ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,184                                      ;
-;     Total combinational functions  ; 936                                        ;
-;     Dedicated logic registers      ; 635                                        ;
-; Total registers                    ; 635                                        ;
+; Total logic elements               ; 1,201                                      ;
+;     Total combinational functions  ; 946                                        ;
+;     Dedicated logic registers      ; 638                                        ;
+; Total registers                    ; 638                                        ;
 ; Total pins                         ; 38                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 65,536                                     ;
@@ -202,7 +202,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/altsyncram_b922.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/altera/14.1/project2/db/altsyncram_b922.tdf                       ;         ;
 ; sin_data.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/14.1/project2/sin_data.mif                                 ;         ;
 ; db/altsyncram_4l91.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/altera/14.1/project2/db/altsyncram_4l91.tdf                       ;         ;
-; ../img_data.mif                  ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/14.1/project2/img_data.mif                                 ;         ;
+; img_data.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/14.1/project2/img_data.mif                                 ;         ;
 +----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
 
 
@@ -211,20 +211,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------------------------+
 ; Resource                                    ; Usage                                          ;
 +---------------------------------------------+------------------------------------------------+
-; Estimated Total logic elements              ; 1,184                                          ;
+; Estimated Total logic elements              ; 1,201                                          ;
 ;                                             ;                                                ;
-; Total combinational functions               ; 936                                            ;
+; Total combinational functions               ; 946                                            ;
 ; Logic element usage by number of LUT inputs ;                                                ;
-;     -- 4 input functions                    ; 356                                            ;
-;     -- 3 input functions                    ; 286                                            ;
-;     -- <=2 input functions                  ; 294                                            ;
+;     -- 4 input functions                    ; 343                                            ;
+;     -- 3 input functions                    ; 303                                            ;
+;     -- <=2 input functions                  ; 300                                            ;
 ;                                             ;                                                ;
 ; Logic elements by mode                      ;                                                ;
-;     -- normal mode                          ; 537                                            ;
-;     -- arithmetic mode                      ; 399                                            ;
+;     -- normal mode                          ; 545                                            ;
+;     -- arithmetic mode                      ; 401                                            ;
 ;                                             ;                                                ;
-; Total registers                             ; 635                                            ;
-;     -- Dedicated logic registers            ; 635                                            ;
+; Total registers                             ; 638                                            ;
+;     -- Dedicated logic registers            ; 638                                            ;
 ;     -- I/O registers                        ; 0                                              ;
 ;                                             ;                                                ;
 ; I/O pins                                    ; 38                                             ;
@@ -234,7 +234,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                                ;
 ; Maximum fan-out node                        ; decrease_clock:decrease_clock_instance|clk_out ;
 ; Maximum fan-out                             ; 332                                            ;
-; Total fan-out                               ; 4899                                           ;
+; Total fan-out                               ; 4938                                           ;
 ; Average fan-out                             ; 2.96                                           ;
 +---------------------------------------------+------------------------------------------------+
 
@@ -244,15 +244,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |signal_generation                              ; 936 (0)           ; 635 (0)      ; 65536       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                           ; work         ;
+; |signal_generation                              ; 946 (0)           ; 638 (0)      ; 65536       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                           ; work         ;
 ;    |decrease_clock:decrease_clock_instance|     ; 104 (104)         ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|decrease_clock:decrease_clock_instance                                    ; work         ;
-;    |digitron_control:digitron_control_instance| ; 173 (173)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_control:digitron_control_instance                                ; work         ;
-;    |digitron_module:digitron_module_instance|   ; 215 (215)         ; 155 (155)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_module:digitron_module_instance                                  ; work         ;
+;    |digitron_control:digitron_control_instance| ; 176 (176)         ; 63 (63)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_control:digitron_control_instance                                ; work         ;
+;    |digitron_module:digitron_module_instance|   ; 213 (213)         ; 155 (155)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_module:digitron_module_instance                                  ; work         ;
 ;    |img:comb_4|                                 ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img:comb_4                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img:comb_4|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_4l91:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img:comb_4|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated ; work         ;
-;    |key_module:key_module_instance|             ; 272 (272)         ; 203 (203)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|key_module:key_module_instance                                            ; work         ;
-;    |lcd_module:lcd_module_instance|             ; 168 (168)         ; 144 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance                                            ; work         ;
+;    |key_module:key_module_instance|             ; 273 (273)         ; 203 (203)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|key_module:key_module_instance                                            ; work         ;
+;    |lcd_module:lcd_module_instance|             ; 176 (176)         ; 147 (147)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance                                            ; work         ;
 ;    |led_module:led_module_instance|             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|led_module:led_module_instance                                            ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -323,6 +323,7 @@ Encoding Type:  One-Hot
 ; Register name                                             ; Reason for Removal                     ;
 +-----------------------------------------------------------+----------------------------------------+
 ; dac_module:comb_3|dac_pin[0..7]                           ; Stuck at GND due to stuck port data_in ;
+; lcd_module:lcd_module_instance|pic_index[3..7]            ; Stuck at GND due to stuck port data_in ;
 ; digitron_module:digitron_module_instance|dig_tmp[7]       ; Stuck at GND due to stuck port data_in ;
 ; digitron_module:digitron_module_instance|DIG[7]           ; Stuck at VCC due to stuck port data_in ;
 ; lcd_module:lcd_module_instance|command_buffer_index[4..7] ; Stuck at GND due to stuck port data_in ;
@@ -343,7 +344,7 @@ Encoding Type:  One-Hot
 ; lcd_module:lcd_module_instance|buffer_change_step~7       ; Lost fanout                            ;
 ; lcd_module:lcd_module_instance|buffer_change_step~8       ; Lost fanout                            ;
 ; lcd_module:lcd_module_instance|buffer_change_step~9       ; Lost fanout                            ;
-; Total Number of Removed Registers = 31                    ;                                        ;
+; Total Number of Removed Registers = 36                    ;                                        ;
 +-----------------------------------------------------------+----------------------------------------+
 
 
@@ -362,12 +363,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 635   ;
-; Number of registers using Synchronous Clear  ; 48    ;
-; Number of registers using Synchronous Load   ; 87    ;
+; Total registers                              ; 638   ;
+; Number of registers using Synchronous Clear  ; 56    ;
+; Number of registers using Synchronous Load   ; 92    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 397   ;
+; Number of registers using Clock Enable       ; 403   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -377,9 +378,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------+---------+
 ; Inverted Register                                              ; Fan out ;
 +----------------------------------------------------------------+---------+
-; lcd_module:lcd_module_instance|send_command_flag               ; 10      ;
-; digitron_control:digitron_control_instance|set_number_index[2] ; 7       ;
-; digitron_control:digitron_control_instance|set_number_index[0] ; 9       ;
+; digitron_control:digitron_control_instance|shank_position[3]   ; 4       ;
+; lcd_module:lcd_module_instance|send_command_flag               ; 9       ;
+; digitron_control:digitron_control_instance|set_number_index[1] ; 6       ;
 ; lcd_module:lcd_module_instance|command[7]                      ; 1       ;
 ; lcd_module:lcd_module_instance|command[5]                      ; 1       ;
 ; lcd_module:lcd_module_instance|command[3]                      ; 1       ;
@@ -395,34 +396,36 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|page_counter[3]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |signal_generation|decrease_clock:decrease_clock_instance|clk_count[17]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|binary_bcd_count[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[27]       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|page_counter[2]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|column_counter[5]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |signal_generation|decrease_clock:decrease_clock_instance|clk_count[19]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|binary_bcd_count[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[25]       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[24]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[33]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[29]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[36]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[32]       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[43]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[37]       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|column_counter[2]             ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|lf_count[3]       ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|start_time[19]    ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data_ins[3]                   ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|number_to_show[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[40]       ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[4]                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[10]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|lf_count[0]       ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|start_time[2]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data_ins[7]                   ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|number_to_show[7] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[5] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[0] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|digitron_control:digitron_control_instance|shank_position[3] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[3]                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[0]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[5]                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux0                ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |signal_generation|lcd_module:lcd_module_instance|buffer_change_step            ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux3                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |signal_generation|digitron_control:digitron_control_instance|set_number_index  ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |signal_generation|digitron_control:digitron_control_instance|set_number_index  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |signal_generation|lcd_module:lcd_module_instance|buffer_change_step            ;
 ; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |signal_generation|digitron_control:digitron_control_instance|start_time        ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux9                ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 25 LEs               ; 10 LEs                 ; No         ; |signal_generation|digitron_control:digitron_control_instance|Selector4         ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux4                ;
+; 11:1               ; 5 bits    ; 35 LEs        ; 25 LEs               ; 10 LEs                 ; No         ; |signal_generation|digitron_control:digitron_control_instance|Selector2         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -623,28 +626,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 38                          ;
-; cycloneiii_ff         ; 635                         ;
-;     ENA               ; 312                         ;
-;     ENA SCLR          ; 6                           ;
+; cycloneiii_ff         ; 638                         ;
+;     ENA               ; 307                         ;
+;     ENA SCLR          ; 14                          ;
 ;     ENA SCLR SLD      ; 10                          ;
-;     ENA SLD           ; 69                          ;
+;     ENA SLD           ; 72                          ;
 ;     SCLR              ; 32                          ;
-;     SLD               ; 8                           ;
-;     plain             ; 198                         ;
-; cycloneiii_lcell_comb ; 938                         ;
-;     arith             ; 399                         ;
+;     SLD               ; 10                          ;
+;     plain             ; 193                         ;
+; cycloneiii_lcell_comb ; 948                         ;
+;     arith             ; 401                         ;
 ;         2 data inputs ; 204                         ;
-;         3 data inputs ; 195                         ;
-;     normal            ; 539                         ;
+;         3 data inputs ; 197                         ;
+;     normal            ; 547                         ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 30                          ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 91                          ;
-;         4 data inputs ; 356                         ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 63                          ;
+;         3 data inputs ; 106                         ;
+;         4 data inputs ; 343                         ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.80                       ;
-; Average LUT depth     ; 5.14                        ;
+; Max LUT depth         ; 16.70                       ;
+; Average LUT depth     ; 5.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -653,7 +656,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -663,7 +666,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 17 21:44:35 2018
+    Info: Processing started: Tue Apr 17 23:52:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off signal_generation -c signal_generation
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file key_module.v
@@ -688,7 +691,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file sin.v
     Info (12023): Found entity 1: sin
 Info (12021): Found 1 design units, including 1 entities, in source file img.v
     Info (12023): Found entity 1: img
-Warning (10037): Verilog HDL or VHDL warning at lcd_module.v(90): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at lcd_module.v(105): conditional expression evaluates to a constant
 Critical Warning (10846): Verilog HDL Instantiation warning at signal_generation.v(41): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at signal_generation.v(45): instance has no name
 Info (12127): Elaborating entity "signal_generation" for the top level hierarchy
@@ -696,20 +699,22 @@ Info (12128): Elaborating entity "decrease_clock" for hierarchy "decrease_clock:
 Info (12128): Elaborating entity "key_module" for hierarchy "key_module:key_module_instance"
 Info (12128): Elaborating entity "led_module" for hierarchy "led_module:led_module_instance"
 Info (12128): Elaborating entity "lcd_module" for hierarchy "lcd_module:lcd_module_instance"
-Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(22): object "col" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(22): object "page" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(33): object "new_data_come" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(37): object "pre_clear_flag" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(41): object "buffer_change_page" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(82): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(94): truncated value with size 32 to match size of target (13)
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(95): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(96): truncated value with size 32 to match size of target (13)
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(115): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at lcd_module.v(167): truncated value with size 32 to match size of target (8)
-Warning (10030): Net "command_buffer.data_a" at lcd_module.v(20) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "command_buffer.waddr_a" at lcd_module.v(20) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "command_buffer.we_a" at lcd_module.v(20) has no driver or initial value, using a default initial value '0'
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(24): object "col" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(24): object "page" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(35): object "new_data_come" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(38): object "initial_counter" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd_module.v(43): object "buffer_change_page" assigned a value but never read
+Info (10264): Verilog HDL Case Statement information at lcd_module.v(81): all case item expressions in this case statement are onehot
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(97): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(109): truncated value with size 32 to match size of target (13)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(110): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(111): truncated value with size 32 to match size of target (13)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(130): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(152): truncated value with size 32 to match size of target (13)
+Warning (10230): Verilog HDL assignment warning at lcd_module.v(198): truncated value with size 32 to match size of target (8)
+Warning (10030): Net "command_buffer.data_a" at lcd_module.v(22) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "command_buffer.waddr_a" at lcd_module.v(22) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "command_buffer.we_a" at lcd_module.v(22) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "digitron_module" for hierarchy "digitron_module:digitron_module_instance"
 Warning (10230): Verilog HDL assignment warning at digitron_module.v(40): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at digitron_module.v(57): truncated value with size 32 to match size of target (4)
@@ -782,7 +787,6 @@ Info (12133): Instantiated megafunction "img:comb_4|altsyncram:altsyncram_compon
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4l91.tdf
     Info (12023): Found entity 1: altsyncram_4l91
 Info (12128): Elaborating entity "altsyncram_4l91" for hierarchy "img:comb_4|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated"
-Critical Warning (127005): Memory depth (8192) in the design file differs from memory depth (1024) in the Memory Initialization File "C:/altera/14.1/project2/img_data.mif" -- setting initial value for remaining addresses to 0
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated|q_a[0]"
@@ -812,15 +816,15 @@ Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/altera/14.1/project2/output_files/signal_generation.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1294 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1310 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1248 logic cells
+    Info (21061): Implemented 1264 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 694 megabytes
-    Info: Processing ended: Tue Apr 17 21:44:54 2018
-    Info: Elapsed time: 00:00:19
+    Info: Peak virtual memory: 696 megabytes
+    Info: Processing ended: Tue Apr 17 23:53:03 2018
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:36
 
 

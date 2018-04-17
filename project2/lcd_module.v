@@ -4,8 +4,10 @@ module lcd_module(
 						lcd,
 						number_on_digitron,
 						address,
-						q);
+						q,
+						shank_position);
 input wire[19:0]number_on_digitron;		
+input wire[5:0] shank_position;
 input clk;
 input clk_low;
 output reg [12:0]address;
@@ -41,6 +43,7 @@ reg iic_clk_out;
 reg [7:0]buffer_change_page[0:2];
 reg [7:0] buffer_change_step;
 reg [12:0] address_counter;
+reg [7:0] pic_index;
 initial begin
 	col = 0;
 	initial_counter <= 0;
@@ -74,6 +77,18 @@ initial begin
 end
 
 
+always @ (posedge clk)begin
+	case (shank_position)
+	6'b000001:pic_index = 5;
+	6'b000010:pic_index = 4;
+	6'b000100:pic_index = 3;
+	6'b001000:pic_index = 2;
+	6'b010000:pic_index = 1;
+	6'b100000:pic_index = 0;
+	default:pic_index = 5;
+	endcase
+end
+
 
 always @ ( posedge iic_clk_out) begin
 	
@@ -93,8 +108,8 @@ always @ ( posedge iic_clk_out) begin
 			data  = q;
 			address_counter = address_counter + 1;
 			column_counter = column_counter + 1;
-			address_counter = 128 * page_counter + column_counter;
-			if (address_counter == 8192)begin
+			address_counter = 128 * page_counter + column_counter + (pic_index) * 1024;
+			if (address_counter >= 8192)begin
 				address_counter = 0;
 			end
 			address = address_counter;
@@ -118,10 +133,26 @@ always @ ( posedge iic_clk_out) begin
 					end				
 				endcase
 			end else begin
-				column_counter = 0;
-				initial_counter = initial_counter + 1;
-				if (initial_counter > 1000)pre_clear_flag = 1;
-				page_counter  = 0;
+				send_command_flag = 1;
+				case (buffer_change_step)
+					0:begin
+						command  = 8'h10;
+						buffer_change_step = 1;
+					end
+					1:begin
+						command  = 8'h00;
+						buffer_change_step = 2;
+					end
+					2:begin
+						command  = 8'hb0;
+						column_counter = 0;
+						buffer_change_step = 0;
+						column_counter = 0;
+						page_counter  = 0;	
+						address = (pic_index) * 1024;
+					end				
+				endcase
+				
 			end
 		end//else 
 	data_quantity = data_quantity + 1;

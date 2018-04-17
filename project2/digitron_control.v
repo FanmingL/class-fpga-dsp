@@ -22,11 +22,11 @@ reg[3:0] lf_count;
 */
 initial begin
 	point_position <= 6'b000000;    //point position
-	shank_position <= 6'b000000;    //to select which to shank
+	shank_position <= 6'b001000;    //to select which to shank
 	start_time <= 0;
 	number_to_show <= 0;
 	FSM <= 0;
-	set_number_index <= 5;
+	set_number_index <= 2;
 	key_used <= 4'b0000;
 	exp_number[5] <= 1;
 	exp_number[4] <= 10;
