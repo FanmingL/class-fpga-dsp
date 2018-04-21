@@ -1,4 +1,5 @@
 module lcd_control(clk,
+						clk_out,
 						ram_write_data,
 						ram_write_addr,
 						ram_write_en,
@@ -7,9 +8,9 @@ module lcd_control(clk,
 						ram_read_addr_tmp,
 						ram_write_addr_tmp,
 						wren_tmp,
-						ram_read_data_tmp
+						ram_read_data_tmp,
 						);
-input clk;
+input clk,clk_out;
 input wire[14:0] KEY_STATE;
 input wire[7:0] ram_read_data_tmp;
 output reg[7:0] ram_write_data, ram_write_data_tmp;
@@ -23,7 +24,8 @@ reg[15:0] step_head, step_tail, counter;
 reg[15:0] position_x[0:15];
 reg[15:0] position_y[0:15];
 reg[3:0] head_index, index_tail;
-
+reg[3:0] directions;
+reg[7:0] period, period_counter;
 initial begin
 	page <= 0;
 	column <= 0;
@@ -31,56 +33,58 @@ initial begin
 	ram_write_en <= 1;
 	wren_tmp <= 1;
 	counter <= 1;
+	period <= 150;   //200ms
+	directions <= 0;
 end
 
 always @ (posedge clk )begin
 	key_active = (KEY_STATE[14] | KEY_STATE[13] | KEY_STATE[12] | KEY_STATE[11] | KEY_STATE[10]);
 end
 
-always @ (posedge key_active)begin
-	if (KEY_STATE[4])begin
-		clear_flag = ~clear_flag;
-	end 
-	
-	if (KEY_STATE[0])begin					//up
-		if (~clear_flag)begin
-			if (position_head_y == 0)begin
-				position_head_y = 63;
-			end else begin
-				position_head_y = position_head_y - 1;
+always @ (posedge clk_out)begin
+	period_counter = period_counter + 1;
+	if (period_counter == period&&(step_head ==0)&&(step_tail ==0))begin
+		period_counter = 0;
+		
+		
+		case(directions)
+			0:begin
+				if (~clear_flag)begin
+					if (position_head_y == 0)begin
+						position_head_y = 63;
+					end else begin
+						position_head_y = position_head_y - 1;
+					end
+				end
 			end
-		end
-	end
-	
-	if (KEY_STATE[1])begin					//down
-		if (~clear_flag)begin
-			if (position_head_y == 63)begin
-				position_head_y = 0;
-			end else begin
-				position_head_y = position_head_y + 1;
+			1:begin
+				if (~clear_flag)begin
+					if (position_head_y == 63)begin
+						position_head_y = 0;
+					end else begin
+						position_head_y = position_head_y + 1;
+					end
+				end
 			end
-		end
-	end
-	
-	if (KEY_STATE[2])begin					//left
-		if (~clear_flag)begin
-			if (position_head_x == 0)begin
-				position_head_x = 127;
-			end else begin
-				position_head_x = position_head_x - 1;
+			2:begin
+				if (~clear_flag)begin
+					if (position_head_x == 0)begin
+						position_head_x = 127;
+					end else begin
+						position_head_x = position_head_x - 1;
+					end
+				end
 			end
-		end
-	end
-	if (KEY_STATE[3])begin					//right
-		if (~clear_flag)begin
-			if (position_head_x == 127)begin
-				position_head_x = 0;
-			end else begin
-				position_head_x = position_head_x + 1;
+			3:begin
+				if (~clear_flag)begin
+					if (position_head_x == 127)begin
+						position_head_x = 0;
+					end else begin
+						position_head_x = position_head_x + 1;
+					end
+				end
 			end
-		end
-	end
-	if (KEY_STATE[0]|KEY_STATE[1]|KEY_STATE[2]|KEY_STATE[3])begin
+		endcase
 		head_index = head_index + 1;
 		position_x[head_index] = position_head_x;
 		position_y[head_index] = position_head_y;
@@ -91,10 +95,33 @@ always @ (posedge key_active)begin
 end
 
 
+always @ (posedge key_active)begin
+	if (KEY_STATE[4])begin
+		clear_flag = ~clear_flag;
+	end 
+	
+	if (KEY_STATE[0])begin					//up
+		directions = 0;
+	end
+	
+	if (KEY_STATE[1])begin					//down
+		directions = 1;
+	end
+	
+	if (KEY_STATE[2])begin					//left
+		directions = 2;
+	end
+	if (KEY_STATE[3])begin					//right
+		directions = 3;
+	end
+
+end
+
+
 
 always @ (negedge clk) begin
-	
 	if ((position_head_x == column) && (page*8 <= position_head_y) && ((page+1)*8 > position_head_y))begin
+		
 		case(step_head)
 			0:begin
 				ram_read_addr_tmp = column + page * 128;

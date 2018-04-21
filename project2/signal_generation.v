@@ -52,7 +52,7 @@ module signal_generation(
 	img img_instance(address, clk, q);
 	img_ram img_ram_instance(clk,ram_write_data,ram_read_addr,ram_write_addr,wren,ram_read_data);
 	img_buffer img_buffer_instance_tmp(clk,ram_write_data_tmp,ram_read_addr_tmp,ram_write_addr_tmp,wren_tmp,ram_read_data_tmp);
-	lcd_control lcd_control_instance(clk,ram_write_data,ram_write_addr,wren,KEY_STATE,
+	lcd_control lcd_control_instance(clk,clk_out, ram_write_data,ram_write_addr,wren,KEY_STATE,
 	ram_write_data_tmp,ram_read_addr_tmp,ram_write_addr_tmp,wren_tmp,ram_read_data_tmp);
 
 

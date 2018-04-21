@@ -1,5 +1,5 @@
 Analysis & Synthesis report for signal_generation
-Sat Apr 21 15:07:42 2018
+Sat Apr 21 20:52:35 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -17,34 +17,35 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |signal_generation|lcd_control:lcd_control_instance|step_tail
  11. State Machine - |signal_generation|lcd_control:lcd_control_instance|step_head
- 12. State Machine - |signal_generation|lcd_module:lcd_module_instance|state
- 13. State Machine - |signal_generation|lcd_module:lcd_module_instance|buffer_change_step
- 14. Registers Removed During Synthesis
- 15. Removed Registers Triggering Further Register Optimizations
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Registers Packed Into Inferred Megafunctions
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Source assignments for sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated
- 21. Source assignments for img:img_instance|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated
- 22. Source assignments for img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
- 23. Source assignments for img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
- 24. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated
- 25. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated
- 26. Parameter Settings for User Entity Instance: sin:sin_module|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: img:img_instance|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: img_ram:img_ram_instance|altsyncram:altsyncram_component
- 29. Parameter Settings for User Entity Instance: img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component
- 30. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0
- 31. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0
- 32. Parameter Settings for Inferred Entity Instance: dac_control:comb_4|lpm_divide:Div0
- 33. altsyncram Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "sin:sin_module"
- 35. Port Connectivity Checks: "decrease_clock:decrease_clock_instance"
- 36. Post-Synthesis Netlist Statistics for Top Partition
- 37. Elapsed Time Per Partition
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 12. State Machine - |signal_generation|lcd_control:lcd_control_instance|directions
+ 13. State Machine - |signal_generation|lcd_module:lcd_module_instance|state
+ 14. State Machine - |signal_generation|lcd_module:lcd_module_instance|buffer_change_step
+ 15. Registers Removed During Synthesis
+ 16. Removed Registers Triggering Further Register Optimizations
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Registers Packed Into Inferred Megafunctions
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated
+ 22. Source assignments for img:img_instance|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated
+ 23. Source assignments for img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
+ 24. Source assignments for img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
+ 25. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated
+ 26. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated
+ 27. Parameter Settings for User Entity Instance: sin:sin_module|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: img:img_instance|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: img_ram:img_ram_instance|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component
+ 31. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0
+ 32. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0
+ 33. Parameter Settings for Inferred Entity Instance: dac_control:comb_4|lpm_divide:Div0
+ 34. altsyncram Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "sin:sin_module"
+ 36. Port Connectivity Checks: "decrease_clock:decrease_clock_instance"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+ 40. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,15 +72,15 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 21 15:07:42 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 21 20:52:34 2018      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; signal_generation                          ;
 ; Top-level Entity Name              ; signal_generation                          ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 2,283                                      ;
-;     Total combinational functions  ; 1,994                                      ;
-;     Dedicated logic registers      ; 814                                        ;
-; Total registers                    ; 814                                        ;
+; Total logic elements               ; 2,316                                      ;
+;     Total combinational functions  ; 2,027                                      ;
+;     Dedicated logic registers      ; 826                                        ;
+; Total registers                    ; 826                                        ;
 ; Total pins                         ; 38                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 98,816                                     ;
@@ -236,20 +237,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------------------------+
 ; Resource                                    ; Usage                                          ;
 +---------------------------------------------+------------------------------------------------+
-; Estimated Total logic elements              ; 2,283                                          ;
+; Estimated Total logic elements              ; 2,316                                          ;
 ;                                             ;                                                ;
-; Total combinational functions               ; 1994                                           ;
+; Total combinational functions               ; 2027                                           ;
 ; Logic element usage by number of LUT inputs ;                                                ;
-;     -- 4 input functions                    ; 550                                            ;
-;     -- 3 input functions                    ; 698                                            ;
-;     -- <=2 input functions                  ; 746                                            ;
+;     -- 4 input functions                    ; 598                                            ;
+;     -- 3 input functions                    ; 658                                            ;
+;     -- <=2 input functions                  ; 771                                            ;
 ;                                             ;                                                ;
 ; Logic elements by mode                      ;                                                ;
-;     -- normal mode                          ; 1151                                           ;
-;     -- arithmetic mode                      ; 843                                            ;
+;     -- normal mode                          ; 1177                                           ;
+;     -- arithmetic mode                      ; 850                                            ;
 ;                                             ;                                                ;
-; Total registers                             ; 814                                            ;
-;     -- Dedicated logic registers            ; 814                                            ;
+; Total registers                             ; 826                                            ;
+;     -- Dedicated logic registers            ; 826                                            ;
 ;     -- I/O registers                        ; 0                                              ;
 ;                                             ;                                                ;
 ; I/O pins                                    ; 38                                             ;
@@ -258,9 +259,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                                              ;
 ;                                             ;                                                ;
 ; Maximum fan-out node                        ; decrease_clock:decrease_clock_instance|clk_out ;
-; Maximum fan-out                             ; 270                                            ;
-; Total fan-out                               ; 8958                                           ;
-; Average fan-out                             ; 3.04                                           ;
+; Maximum fan-out                             ; 346                                            ;
+; Total fan-out                               ; 9135                                           ;
+; Average fan-out                             ; 3.05                                           ;
 +---------------------------------------------+------------------------------------------------+
 
 
@@ -269,12 +270,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |signal_generation                            ; 1994 (1)          ; 814 (0)      ; 98816       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                                                                    ; work         ;
-;    |dac_control:comb_4|                       ; 768 (279)         ; 113 (113)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4                                                                                                 ; work         ;
-;       |lpm_divide:Div0|                       ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0                                                                                 ; work         ;
-;          |lpm_divide_3jm:auto_generated|      ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_rlh:divider|     ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ; work         ;
-;                |alt_u_div_a7f:divider|        ; 489 (489)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; work         ;
+; |signal_generation                            ; 2027 (1)          ; 826 (0)      ; 98816       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                                                                    ; work         ;
+;    |dac_control:comb_4|                       ; 780 (279)         ; 113 (113)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                       ; 501 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_3jm:auto_generated|      ; 501 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_rlh:divider|     ; 501 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ; work         ;
+;                |alt_u_div_a7f:divider|        ; 501 (501)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; work         ;
 ;    |dac_module:comb_3|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_module:comb_3                                                                                                  ; work         ;
 ;    |decrease_clock:decrease_clock_instance|   ; 104 (104)         ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|decrease_clock:decrease_clock_instance                                                                             ; work         ;
 ;    |digitron_module:digitron_module_instance| ; 214 (214)         ; 147 (147)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_module:digitron_module_instance                                                                           ; work         ;
@@ -288,12 +289,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img_ram:img_ram_instance|altsyncram:altsyncram_component                                                           ; work         ;
 ;          |altsyncram_o3q1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated                            ; work         ;
 ;    |key_module:key_module_instance|           ; 283 (283)         ; 208 (208)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|key_module:key_module_instance                                                                                     ; work         ;
-;    |lcd_control:lcd_control_instance|         ; 387 (387)         ; 104 (104)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance                                                                                   ; work         ;
+;    |lcd_control:lcd_control_instance|         ; 409 (409)         ; 116 (116)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance                                                                                   ; work         ;
 ;       |altsyncram:position_x_rtl_0|           ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0                                                       ; work         ;
 ;          |altsyncram_apd1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated                        ; work         ;
 ;       |altsyncram:position_y_rtl_0|           ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0                                                       ; work         ;
 ;          |altsyncram_apd1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated                        ; work         ;
-;    |lcd_module:lcd_module_instance|           ; 233 (233)         ; 164 (164)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance                                                                                     ; work         ;
+;    |lcd_module:lcd_module_instance|           ; 232 (232)         ; 164 (164)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance                                                                                     ; work         ;
 ;    |led_module:led_module_instance|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|led_module:led_module_instance                                                                                     ; work         ;
 ;    |sin:sin_module|                           ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|sin:sin_module                                                                                                     ; work         ;
 ;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|sin:sin_module|altsyncram:altsyncram_component                                                                     ; work         ;
@@ -353,6 +354,19 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |signal_generation|lcd_control:lcd_control_instance|directions          ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; directions.0000 ; directions.0010 ; directions.0001 ; directions.0011 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; directions.0011 ; 0               ; 0               ; 0               ; 0               ;
+; directions.0001 ; 0               ; 0               ; 1               ; 1               ;
+; directions.0010 ; 0               ; 1               ; 0               ; 1               ;
+; directions.0000 ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------+
 ; State Machine - |signal_generation|lcd_module:lcd_module_instance|state                             ;
 +----------------+----------------+----------------+----------------+----------------+----------------+
@@ -407,6 +421,7 @@ Encoding Type:  One-Hot
 ; digitron_module:digitron_module_instance|dig_tmp[7]             ; Stuck at GND due to stuck port data_in                         ;
 ; digitron_module:digitron_module_instance|DIG[7]                 ; Stuck at VCC due to stuck port data_in                         ;
 ; lcd_module:lcd_module_instance|command_buffer_index[4..7]       ; Stuck at GND due to stuck port data_in                         ;
+; lcd_control:lcd_control_instance|step_tail~5                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_tail~6                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_tail~7                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_tail~8                    ; Lost fanout                                                    ;
@@ -420,7 +435,7 @@ Encoding Type:  One-Hot
 ; lcd_control:lcd_control_instance|step_tail~16                   ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_tail~17                   ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_tail~18                   ; Lost fanout                                                    ;
-; lcd_control:lcd_control_instance|step_tail~19                   ; Lost fanout                                                    ;
+; lcd_control:lcd_control_instance|step_head~5                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_head~6                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_head~7                    ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_head~8                    ; Lost fanout                                                    ;
@@ -434,7 +449,10 @@ Encoding Type:  One-Hot
 ; lcd_control:lcd_control_instance|step_head~16                   ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_head~17                   ; Lost fanout                                                    ;
 ; lcd_control:lcd_control_instance|step_head~18                   ; Lost fanout                                                    ;
-; lcd_control:lcd_control_instance|step_head~19                   ; Lost fanout                                                    ;
+; lcd_control:lcd_control_instance|directions~2                   ; Lost fanout                                                    ;
+; lcd_control:lcd_control_instance|directions~3                   ; Lost fanout                                                    ;
+; lcd_control:lcd_control_instance|directions~4                   ; Lost fanout                                                    ;
+; lcd_control:lcd_control_instance|directions~5                   ; Lost fanout                                                    ;
 ; lcd_module:lcd_module_instance|state~7                          ; Lost fanout                                                    ;
 ; lcd_module:lcd_module_instance|state~8                          ; Lost fanout                                                    ;
 ; lcd_module:lcd_module_instance|state~10                         ; Lost fanout                                                    ;
@@ -570,7 +588,7 @@ Encoding Type:  One-Hot
 ; dac_control:comb_4|exp_number2~119                              ; Stuck at GND due to stuck port clock                           ;
 ; dac_control:comb_4|step_test[0]                                 ; Stuck at GND due to stuck port data_in                         ;
 ; dac_control:comb_4|step_counter[0]                              ; Stuck at GND due to stuck port data_in                         ;
-; Total Number of Removed Registers = 201                         ;                                                                ;
+; Total Number of Removed Registers = 205                         ;                                                                ;
 +-----------------------------------------------------------------+----------------------------------------------------------------+
 
 
@@ -595,12 +613,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 814   ;
+; Total registers                              ; 826   ;
 ; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 74    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 475   ;
+; Number of registers using Clock Enable       ; 509   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -624,7 +642,7 @@ Encoding Type:  One-Hot
 ; dac_control:comb_4|step_test[2]                  ; 4       ;
 ; lcd_module:lcd_module_instance|pic_index[0]      ; 5       ;
 ; lcd_module:lcd_module_instance|pic_index[1]      ; 5       ;
-; lcd_control:lcd_control_instance|clear_flag      ; 5       ;
+; lcd_control:lcd_control_instance|clear_flag      ; 36      ;
 ; lcd_module:lcd_module_instance|command[3]        ; 1       ;
 ; lcd_module:lcd_module_instance|command[2]        ; 1       ;
 ; lcd_module:lcd_module_instance|command[1]        ; 1       ;
@@ -648,52 +666,51 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|page_counter[7]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|column_counter[1]             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data[3]                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |signal_generation|decrease_clock:decrease_clock_instance|clk_count[24]         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|page_counter[4]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|column_counter[0]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data[7]                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |signal_generation|decrease_clock:decrease_clock_instance|clk_count[23]         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|shank_position[4]                         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|shank_position[0]                         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|pic_index[6]                  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|binary_bcd_count[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[28]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[23]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[35]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[31]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[43]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|shank_position[1]                         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|pic_index[2]                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|binary_bcd_count[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[26]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[21]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[33]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[30]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[42]       ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|digitron_module:digitron_module_instance|count_dec[39]       ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[1]                    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[10]                   ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[2]                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|address[11]                   ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|shank_position[2]                         ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |signal_generation|dac_control:comb_4|real_frequency[11]                        ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_write_addr[2]           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_write_data[7]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_read_addr_tmp[0]        ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|ram_read_addr[0]              ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |signal_generation|dac_control:comb_4|step_test[14]                             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_write_addr[0]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_write_data[5]           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 0 LEs                ; 14 LEs                 ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_read_addr_tmp[6]        ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|ram_read_addr[9]              ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|lcd_control:lcd_control_instance|ram_read_addr_tmp[9]        ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data_ins[3]                   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|data_ins[6]                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|pic_index[1]                  ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|step_test[6]                              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|step_test[2]                              ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[0]                    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[5]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[7]                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_module:lcd_module_instance|pic_index                     ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |signal_generation|lcd_module:lcd_module_instance|buffer_change_step            ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux3                ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux0                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|position_head_x             ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|position_head_x             ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|position_head_y             ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|position_head_y             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |signal_generation|dac_control:comb_4|set_number_index                          ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |signal_generation|dac_control:comb_4|exp_number2.raddr_b[2]                    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |signal_generation|dac_control:comb_4|exp_number2.raddr_b[0]                    ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |signal_generation|dac_control:comb_4|real_frequency                            ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft0                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft0                  ;
-; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux4                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|directions                  ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux6                ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |signal_generation|lcd_control:lcd_control_instance|Selector23                  ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; No         ; |signal_generation|lcd_control:lcd_control_instance|Selector4                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -1240,28 +1257,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 38                          ;
-; cycloneiii_ff         ; 814                         ;
-;     ENA               ; 397                         ;
+; cycloneiii_ff         ; 826                         ;
+;     ENA               ; 431                         ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SCLR SLD      ; 10                          ;
 ;     ENA SLD           ; 54                          ;
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 10                          ;
-;     plain             ; 297                         ;
-; cycloneiii_lcell_comb ; 1995                        ;
-;     arith             ; 843                         ;
-;         2 data inputs ; 351                         ;
+;     plain             ; 275                         ;
+; cycloneiii_lcell_comb ; 2028                        ;
+;     arith             ; 850                         ;
+;         2 data inputs ; 358                         ;
 ;         3 data inputs ; 492                         ;
-;     normal            ; 1152                        ;
+;     normal            ; 1178                        ;
 ;         0 data inputs ; 33                          ;
-;         1 data inputs ; 59                          ;
-;         2 data inputs ; 304                         ;
-;         3 data inputs ; 206                         ;
-;         4 data inputs ; 550                         ;
+;         1 data inputs ; 62                          ;
+;         2 data inputs ; 319                         ;
+;         3 data inputs ; 166                         ;
+;         4 data inputs ; 598                         ;
 ; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 74.10                       ;
-; Average LUT depth     ; 21.39                       ;
+; Average LUT depth     ; 21.28                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1280,7 +1297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sat Apr 21 15:07:23 2018
+    Info: Processing started: Sat Apr 21 20:52:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off signal_generation -c signal_generation
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file key_module.v
@@ -1307,6 +1324,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file img.v
     Info (12023): Found entity 1: img
 Info (12021): Found 1 design units, including 1 entities, in source file img_buffer.v
     Info (12023): Found entity 1: img_buffer
+Warning (10238): Verilog Module Declaration warning at lcd_control.v(12): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "lcd_control"
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_control.v
     Info (12023): Found entity 1: lcd_control
 Info (12021): Found 1 design units, including 1 entities, in source file img_ram.v
@@ -1449,23 +1467,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_o3q1" for hierarchy "img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated"
 Info (12128): Elaborating entity "img_buffer" for hierarchy "img_buffer:img_buffer_instance_tmp"
 Info (12128): Elaborating entity "lcd_control" for hierarchy "lcd_control:lcd_control_instance"
-Warning (10036): Verilog HDL or VHDL warning at lcd_control.v(22): object "counter" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(50): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(60): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(70): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(79): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(84): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(87): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(100): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(104): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(109): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(112): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(121): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(125): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(130): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(133): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(140): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(143): truncated value with size 32 to match size of target (16)
+Warning (10036): Verilog HDL or VHDL warning at lcd_control.v(23): object "counter" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(45): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(56): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(65): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(74): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(83): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(88): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(91): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(127): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(131): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(136): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(139): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(148): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(152): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(157): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(160): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(167): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(170): truncated value with size 32 to match size of target (16)
 Warning (276027): Inferred dual-clock RAM node "lcd_control:lcd_control_instance|position_x_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "lcd_control:lcd_control_instance|position_y_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 2 instances of uninferred RAM logic
@@ -1544,19 +1563,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "beep" is stuck at VCC
     Warning (13410): Pin "DIG[7]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 41 registers lost all their fanouts during netlist optimizations.
+Info (17049): 45 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/altera/14.1/project2/output_files/signal_generation.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2572 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2609 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 2470 logic cells
+    Info (21061): Implemented 2507 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 74 warnings
-    Info: Peak virtual memory: 705 megabytes
-    Info: Processing ended: Sat Apr 21 15:07:42 2018
-    Info: Elapsed time: 00:00:19
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 76 warnings
+    Info: Peak virtual memory: 706 megabytes
+    Info: Processing ended: Sat Apr 21 20:52:35 2018
+    Info: Elapsed time: 00:00:20
     Info: Total CPU time (on all processors): 00:00:37
 
 
