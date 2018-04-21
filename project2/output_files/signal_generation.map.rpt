@@ -1,5 +1,5 @@
 Analysis & Synthesis report for signal_generation
-Sat Apr 21 14:38:39 2018
+Sat Apr 21 15:07:42 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -23,23 +23,28 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
  15. Removed Registers Triggering Further Register Optimizations
  16. General Register Statistics
  17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated
- 20. Source assignments for img:img_instance|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated
- 21. Source assignments for img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
- 22. Source assignments for img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
- 23. Parameter Settings for User Entity Instance: sin:sin_module|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: img:img_instance|altsyncram:altsyncram_component
- 25. Parameter Settings for User Entity Instance: img_ram:img_ram_instance|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component
- 27. Parameter Settings for Inferred Entity Instance: dac_control:comb_4|lpm_divide:Div0
- 28. altsyncram Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "sin:sin_module"
- 30. Port Connectivity Checks: "decrease_clock:decrease_clock_instance"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 18. Registers Packed Into Inferred Megafunctions
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated
+ 21. Source assignments for img:img_instance|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated
+ 22. Source assignments for img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
+ 23. Source assignments for img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated
+ 24. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated
+ 25. Source assignments for lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated
+ 26. Parameter Settings for User Entity Instance: sin:sin_module|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: img:img_instance|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: img_ram:img_ram_instance|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component
+ 30. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0
+ 31. Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0
+ 32. Parameter Settings for Inferred Entity Instance: dac_control:comb_4|lpm_divide:Div0
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "sin:sin_module"
+ 35. Port Connectivity Checks: "decrease_clock:decrease_clock_instance"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,18 +71,18 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 21 14:38:39 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 21 15:07:42 2018      ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                      ; signal_generation                          ;
 ; Top-level Entity Name              ; signal_generation                          ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 2,688                                      ;
-;     Total combinational functions  ; 2,399                                      ;
-;     Dedicated logic registers      ; 1,101                                      ;
-; Total registers                    ; 1101                                       ;
+; Total logic elements               ; 2,283                                      ;
+;     Total combinational functions  ; 1,994                                      ;
+;     Dedicated logic registers      ; 814                                        ;
+; Total registers                    ; 814                                        ;
 ; Total pins                         ; 38                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 98,304                                     ;
+; Total memory bits                  ; 98,816                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -214,6 +219,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; img_data.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/14.1/project2/img_data.mif                                 ;         ;
 ; db/altsyncram_o3q1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/altera/14.1/project2/db/altsyncram_o3q1.tdf                       ;         ;
 ; img_buffer.mif                   ; yes             ; Auto-Found Memory Initialization File  ; C:/altera/14.1/project2/img_buffer.mif                               ;         ;
+; db/altsyncram_apd1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/altera/14.1/project2/db/altsyncram_apd1.tdf                       ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/altera/14.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/altera/14.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/altera/14.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
@@ -225,37 +231,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                               ;
-+---------------------------------------------+---------------------------------------------+
-; Resource                                    ; Usage                                       ;
-+---------------------------------------------+---------------------------------------------+
-; Estimated Total logic elements              ; 2,688                                       ;
-;                                             ;                                             ;
-; Total combinational functions               ; 2399                                        ;
-; Logic element usage by number of LUT inputs ;                                             ;
-;     -- 4 input functions                    ; 715                                         ;
-;     -- 3 input functions                    ; 951                                         ;
-;     -- <=2 input functions                  ; 733                                         ;
-;                                             ;                                             ;
-; Logic elements by mode                      ;                                             ;
-;     -- normal mode                          ; 1556                                        ;
-;     -- arithmetic mode                      ; 843                                         ;
-;                                             ;                                             ;
-; Total registers                             ; 1101                                        ;
-;     -- Dedicated logic registers            ; 1101                                        ;
-;     -- I/O registers                        ; 0                                           ;
-;                                             ;                                             ;
-; I/O pins                                    ; 38                                          ;
-; Total memory bits                           ; 98304                                       ;
-;                                             ;                                             ;
-; Embedded Multiplier 9-bit elements          ; 0                                           ;
-;                                             ;                                             ;
-; Maximum fan-out node                        ; lcd_control:lcd_control_instance|key_active ;
-; Maximum fan-out                             ; 324                                         ;
-; Total fan-out                               ; 10606                                       ;
-; Average fan-out                             ; 2.94                                        ;
-+---------------------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                  ;
++---------------------------------------------+------------------------------------------------+
+; Resource                                    ; Usage                                          ;
++---------------------------------------------+------------------------------------------------+
+; Estimated Total logic elements              ; 2,283                                          ;
+;                                             ;                                                ;
+; Total combinational functions               ; 1994                                           ;
+; Logic element usage by number of LUT inputs ;                                                ;
+;     -- 4 input functions                    ; 550                                            ;
+;     -- 3 input functions                    ; 698                                            ;
+;     -- <=2 input functions                  ; 746                                            ;
+;                                             ;                                                ;
+; Logic elements by mode                      ;                                                ;
+;     -- normal mode                          ; 1151                                           ;
+;     -- arithmetic mode                      ; 843                                            ;
+;                                             ;                                                ;
+; Total registers                             ; 814                                            ;
+;     -- Dedicated logic registers            ; 814                                            ;
+;     -- I/O registers                        ; 0                                              ;
+;                                             ;                                                ;
+; I/O pins                                    ; 38                                             ;
+; Total memory bits                           ; 98816                                          ;
+;                                             ;                                                ;
+; Embedded Multiplier 9-bit elements          ; 0                                              ;
+;                                             ;                                                ;
+; Maximum fan-out node                        ; decrease_clock:decrease_clock_instance|clk_out ;
+; Maximum fan-out                             ; 270                                            ;
+; Total fan-out                               ; 8958                                           ;
+; Average fan-out                             ; 3.04                                           ;
++---------------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -263,12 +269,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                   ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |signal_generation                            ; 2399 (9)          ; 1101 (0)     ; 98304       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                                                                    ; work         ;
-;    |dac_control:comb_4|                       ; 753 (279)         ; 113 (113)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4                                                                                                 ; work         ;
-;       |lpm_divide:Div0|                       ; 474 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0                                                                                 ; work         ;
-;          |lpm_divide_3jm:auto_generated|      ; 474 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_rlh:divider|     ; 474 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ; work         ;
-;                |alt_u_div_a7f:divider|        ; 474 (474)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; work         ;
+; |signal_generation                            ; 1994 (1)          ; 814 (0)      ; 98816       ; 0            ; 0       ; 0         ; 38   ; 0            ; |signal_generation                                                                                                                    ; work         ;
+;    |dac_control:comb_4|                       ; 768 (279)         ; 113 (113)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                       ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_3jm:auto_generated|      ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_rlh:divider|     ; 489 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider                       ; work         ;
+;                |alt_u_div_a7f:divider|        ; 489 (489)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_control:comb_4|lpm_divide:Div0|lpm_divide_3jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_a7f:divider ; work         ;
 ;    |dac_module:comb_3|                        ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|dac_module:comb_3                                                                                                  ; work         ;
 ;    |decrease_clock:decrease_clock_instance|   ; 104 (104)         ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|decrease_clock:decrease_clock_instance                                                                             ; work         ;
 ;    |digitron_module:digitron_module_instance| ; 214 (214)         ; 147 (147)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|digitron_module:digitron_module_instance                                                                           ; work         ;
@@ -282,7 +288,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img_ram:img_ram_instance|altsyncram:altsyncram_component                                                           ; work         ;
 ;          |altsyncram_o3q1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated                            ; work         ;
 ;    |key_module:key_module_instance|           ; 283 (283)         ; 208 (208)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|key_module:key_module_instance                                                                                     ; work         ;
-;    |lcd_control:lcd_control_instance|         ; 799 (799)         ; 391 (391)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance                                                                                   ; work         ;
+;    |lcd_control:lcd_control_instance|         ; 387 (387)         ; 104 (104)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance                                                                                   ; work         ;
+;       |altsyncram:position_x_rtl_0|           ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0                                                       ; work         ;
+;          |altsyncram_apd1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated                        ; work         ;
+;       |altsyncram:position_y_rtl_0|           ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0                                                       ; work         ;
+;          |altsyncram_apd1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated                        ; work         ;
 ;    |lcd_module:lcd_module_instance|           ; 233 (233)         ; 164 (164)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|lcd_module:lcd_module_instance                                                                                     ; work         ;
 ;    |led_module:led_module_instance|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|led_module:led_module_instance                                                                                     ; work         ;
 ;    |sin:sin_module|                           ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |signal_generation|sin:sin_module                                                                                                     ; work         ;
@@ -300,6 +310,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; img:img_instance|altsyncram:altsyncram_component|altsyncram_4l91:auto_generated|ALTSYNCRAM                   ; AUTO ; ROM              ; 8192         ; 8            ; --           ; --           ; 65536 ; ../img_data.mif ;
 ; img_buffer:img_buffer_instance_tmp|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192  ; img_buffer.mif  ;
 ; img_ram:img_ram_instance|altsyncram:altsyncram_component|altsyncram_o3q1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 1024         ; 8            ; 1024         ; 8            ; 8192  ; img_buffer.mif  ;
+; lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated|ALTSYNCRAM       ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256   ; None            ;
+; lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated|ALTSYNCRAM       ; AUTO ; Simple Dual Port ; 16           ; 16           ; 16           ; 16           ; 256   ; None            ;
 ; sin:sin_module|altsyncram:altsyncram_component|altsyncram_b922:auto_generated|ALTSYNCRAM                     ; AUTO ; True Dual Port   ; 2048         ; 8            ; 2048         ; 8            ; 16384 ; ../sin_data.mif ;
 +--------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
 
@@ -583,12 +595,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1101  ;
+; Total registers                              ; 814   ;
 ; Number of registers using Synchronous Clear  ; 56    ;
 ; Number of registers using Synchronous Load   ; 74    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 506   ;
+; Number of registers using Clock Enable       ; 475   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -619,6 +631,16 @@ Encoding Type:  One-Hot
 ; lcd_module:lcd_module_instance|command[0]        ; 1       ;
 ; Total number of inverted registers = 19          ;         ;
 +--------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                       ;
++---------------------------------------------------------+---------------------------------------------------+------+
+; Register Name                                           ; Megafunction                                      ; Type ;
++---------------------------------------------------------+---------------------------------------------------+------+
+; lcd_control:lcd_control_instance|position_tail_x[0..15] ; lcd_control:lcd_control_instance|position_x_rtl_0 ; RAM  ;
+; lcd_control:lcd_control_instance|position_tail_y[0..15] ; lcd_control:lcd_control_instance|position_y_rtl_0 ; RAM  ;
++---------------------------------------------------------+---------------------------------------------------+------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -653,7 +675,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|pic_index[1]                  ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |signal_generation|dac_control:comb_4|step_test[6]                              ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[0]                    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[7]                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |signal_generation|lcd_module:lcd_module_instance|command[5]                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |signal_generation|digitron_module:digitron_module_instance|ShiftLeft0          ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |signal_generation|lcd_module:lcd_module_instance|pic_index                     ;
@@ -669,9 +691,9 @@ Encoding Type:  One-Hot
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |signal_generation|dac_control:comb_4|real_frequency                            ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft0                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft0                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
 ; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; No         ; |signal_generation|digitron_module:digitron_module_instance|Mux4                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |signal_generation|lcd_control:lcd_control_instance|ShiftLeft1                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -709,6 +731,24 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                          ;
 +---------------------------------+--------------------+------+------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0|altsyncram_apd1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Source assignments for lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0|altsyncram_apd1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                   ;
++---------------------------------+--------------------+------+------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                    ;
++---------------------------------+--------------------+------+------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -955,6 +995,128 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                              ;
++------------------------------------+----------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                           ;
+; WIDTH_A                            ; 16                   ; Untyped                                           ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                           ;
+; NUMWORDS_A                         ; 16                   ; Untyped                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WIDTH_B                            ; 16                   ; Untyped                                           ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                           ;
+; NUMWORDS_B                         ; 16                   ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_apd1      ; Untyped                                           ;
++------------------------------------+----------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0 ;
++------------------------------------+----------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                              ;
++------------------------------------+----------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                           ;
+; WIDTH_A                            ; 16                   ; Untyped                                           ;
+; WIDTHAD_A                          ; 4                    ; Untyped                                           ;
+; NUMWORDS_A                         ; 16                   ; Untyped                                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WIDTH_B                            ; 16                   ; Untyped                                           ;
+; WIDTHAD_B                          ; 4                    ; Untyped                                           ;
+; NUMWORDS_B                         ; 16                   ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_apd1      ; Untyped                                           ;
++------------------------------------+----------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: dac_control:comb_4|lpm_divide:Div0 ;
 +------------------------+----------------+-------------------------------------------+
@@ -983,7 +1145,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------+
 ; Name                                      ; Value                                                              ;
 +-------------------------------------------+--------------------------------------------------------------------+
-; Number of entity instances                ; 4                                                                  ;
+; Number of entity instances                ; 6                                                                  ;
 ; Entity Instance                           ; sin:sin_module|altsyncram:altsyncram_component                     ;
 ;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                    ;
 ;     -- WIDTH_A                            ; 8                                                                  ;
@@ -1028,6 +1190,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; CLOCK0                                                             ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
+; Entity Instance                           ; lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0       ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                          ;
+;     -- WIDTH_A                            ; 16                                                                 ;
+;     -- NUMWORDS_A                         ; 16                                                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                       ;
+;     -- WIDTH_B                            ; 16                                                                 ;
+;     -- NUMWORDS_B                         ; 16                                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
+; Entity Instance                           ; lcd_control:lcd_control_instance|altsyncram:position_y_rtl_0       ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                          ;
+;     -- WIDTH_A                            ; 16                                                                 ;
+;     -- NUMWORDS_A                         ; 16                                                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                       ;
+;     -- WIDTH_B                            ; 16                                                                 ;
+;     -- NUMWORDS_B                         ; 16                                                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
 +-------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -1056,28 +1240,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 38                          ;
-; cycloneiii_ff         ; 1101                        ;
-;     ENA               ; 428                         ;
+; cycloneiii_ff         ; 814                         ;
+;     ENA               ; 397                         ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SCLR SLD      ; 10                          ;
 ;     ENA SLD           ; 54                          ;
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 10                          ;
-;     plain             ; 553                         ;
-; cycloneiii_lcell_comb ; 2400                        ;
+;     plain             ; 297                         ;
+; cycloneiii_lcell_comb ; 1995                        ;
 ;     arith             ; 843                         ;
 ;         2 data inputs ; 351                         ;
 ;         3 data inputs ; 492                         ;
-;     normal            ; 1557                        ;
+;     normal            ; 1152                        ;
 ;         0 data inputs ; 33                          ;
-;         1 data inputs ; 57                          ;
-;         2 data inputs ; 293                         ;
-;         3 data inputs ; 459                         ;
-;         4 data inputs ; 715                         ;
-; cycloneiii_ram_block  ; 32                          ;
+;         1 data inputs ; 59                          ;
+;         2 data inputs ; 304                         ;
+;         3 data inputs ; 206                         ;
+;         4 data inputs ; 550                         ;
+; cycloneiii_ram_block  ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 74.10                       ;
-; Average LUT depth     ; 19.11                       ;
+; Average LUT depth     ; 21.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1086,7 +1270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1096,7 +1280,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sat Apr 21 14:38:19 2018
+    Info: Processing started: Sat Apr 21 15:07:23 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off signal_generation -c signal_generation
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file key_module.v
@@ -1270,8 +1454,8 @@ Warning (10230): Verilog HDL assignment warning at lcd_control.v(50): truncated 
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(60): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(70): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(79): truncated value with size 32 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(84): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at lcd_control.v(87): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(84): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at lcd_control.v(87): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(100): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(104): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(109): truncated value with size 32 to match size of target (8)
@@ -1282,15 +1466,64 @@ Warning (10230): Verilog HDL assignment warning at lcd_control.v(130): truncated
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(133): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(140): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at lcd_control.v(143): truncated value with size 32 to match size of target (16)
-Info (276014): Found 4 instances of uninferred RAM logic
-    Info (276004): RAM logic "lcd_control:lcd_control_instance|position_x" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "lcd_control:lcd_control_instance|position_y" is uninferred due to inappropriate RAM size
+Warning (276027): Inferred dual-clock RAM node "lcd_control:lcd_control_instance|position_x_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "lcd_control:lcd_control_instance|position_y_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 2 instances of uninferred RAM logic
     Info (276004): RAM logic "lcd_module:lcd_module_instance|command_buffer" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "dac_control:comb_4|exp_number2" is uninferred due to inappropriate RAM size
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/altera/14.1/project2/db/signal_generation.ram0_lcd_module_845c945f.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (6) in the Memory Initialization File "C:/altera/14.1/project2/db/signal_generation.ram0_dac_control_16a0bd47.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "lcd_control:lcd_control_instance|position_x_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "lcd_control:lcd_control_instance|position_y_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "dac_control:comb_4|Div0"
+Info (12130): Elaborated megafunction instantiation "lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0"
+Info (12133): Instantiated megafunction "lcd_control:lcd_control_instance|altsyncram:position_x_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_apd1.tdf
+    Info (12023): Found entity 1: altsyncram_apd1
 Info (12130): Elaborated megafunction instantiation "dac_control:comb_4|lpm_divide:Div0"
 Info (12133): Instantiated megafunction "dac_control:comb_4|lpm_divide:Div0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1315,16 +1548,16 @@ Info (17049): 41 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/altera/14.1/project2/output_files/signal_generation.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3198 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2572 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 3128 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 709 megabytes
-    Info: Processing ended: Sat Apr 21 14:38:39 2018
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:38
+    Info (21061): Implemented 2470 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 705 megabytes
+    Info: Processing ended: Sat Apr 21 15:07:42 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

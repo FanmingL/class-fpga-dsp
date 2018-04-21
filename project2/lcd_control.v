@@ -20,9 +20,9 @@ reg[15:0] page, column;
 reg clear_flag, key_active;
 reg[15:0] position_head_x, position_head_y, position_tail_x, position_tail_y;
 reg[15:0] step_head, step_tail, counter;
-reg[15:0] position_x[0:7];
-reg[15:0] position_y[0:7];
-reg[2:0] head_index, index_tail;
+reg[15:0] position_x[0:15];
+reg[15:0] position_y[0:15];
+reg[3:0] head_index, index_tail;
 
 initial begin
 	page <= 0;
