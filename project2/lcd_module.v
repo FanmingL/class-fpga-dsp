@@ -1,18 +1,21 @@
 module lcd_module(
 						clk,
 						clk_low,
+						KEY_STATE,
 						lcd,
-						number_on_digitron,
 						address,
 						q,
-						shank_position);
-input wire[19:0]number_on_digitron;		
-input wire[5:0] shank_position;
+						ram_read_addr,
+						ram_read_data);
+input wire[14:0]KEY_STATE;
+
 input clk;
 input clk_low;
 output reg [12:0]address;
 input wire [7:0]q;
 output wire[3:0]lcd;
+output reg[9:0]ram_read_addr;
+input wire[7:0]ram_read_data;
 reg LCD_CS, LCD_A0, LCD_SCL, LCD_SI;
 assign lcd[0] = LCD_CS;
 assign lcd[1] = LCD_SCL;
@@ -44,6 +47,8 @@ reg [7:0]buffer_change_page[0:2];
 reg [7:0] buffer_change_step;
 reg [12:0] address_counter;
 reg [7:0] pic_index;
+reg show_type;
+reg key_active;
 initial begin
 	col = 0;
 	initial_counter <= 0;
@@ -74,19 +79,33 @@ initial begin
 	buffer_change_page[2] <= 8'h00;
 	address <= 0;
 	address_counter<= 0;
+	pic_index <= 3;
 end
 
+always @ (posedge clk )begin
+	key_active = (KEY_STATE[14] | KEY_STATE[13] | KEY_STATE[12] | KEY_STATE[11] | KEY_STATE[10]);
 
-always @ (posedge clk)begin
-	case (shank_position)
-	6'b000001:pic_index = 5;
-	6'b000010:pic_index = 4;
-	6'b000100:pic_index = 3;
-	6'b001000:pic_index = 2;
-	6'b010000:pic_index = 1;
-	6'b100000:pic_index = 0;
-	default:pic_index = 5;
-	endcase
+end
+
+always @ (posedge key_active)begin
+	if (KEY_STATE[4])begin
+		show_type = ~show_type;
+	end 
+	if (KEY_STATE[2])begin
+		if (pic_index == 0)begin
+			pic_index = 5;
+		end else begin
+			pic_index = pic_index - 1;
+		end
+	end
+	if (KEY_STATE[3])begin
+		if (pic_index == 5)begin
+			pic_index = 0;
+		end else begin
+			pic_index = pic_index + 1;
+		end
+	end
+	
 end
 
 
@@ -101,8 +120,7 @@ always @ ( posedge iic_clk_out) begin
 		end//if command_buffer_index
 	data_quantity = data_quantity + 1;
 	end//if ~initial_flag
-	//else if (~pre_clear_flag)begin
-	else if (1)begin
+	else if (~show_type)begin
 		if (column_counter <128)begin
 			send_command_flag = 0;
 			data  = q;
@@ -156,8 +174,62 @@ always @ ( posedge iic_clk_out) begin
 			end
 		end//else 
 	data_quantity = data_quantity + 1;
-	end//else if ~pre_clear_flag
-	
+	end//~show_type
+	else begin
+		if (column_counter <128)begin
+			send_command_flag = 0;
+			data  = ram_read_data;
+			address_counter = address_counter + 1;
+			column_counter = column_counter + 1;
+			address_counter = 128 * page_counter + column_counter;
+			if (address_counter >= 1024)begin
+				address_counter = 0;
+			end
+			ram_read_addr = address_counter;
+		end else begin //if column_counter<128
+			if (page_counter < 7)begin
+				send_command_flag = 1;
+				case (buffer_change_step)
+					0:begin
+						command  = 8'h10;
+						buffer_change_step = 1;
+					end
+					1:begin
+						command  = 8'h00;
+						buffer_change_step = 2;
+					end
+					2:begin
+						command  = 8'hb1 + page_counter;
+						page_counter = page_counter + 1;
+						column_counter = 0;
+						buffer_change_step = 0;
+					end				
+				endcase
+			end else begin
+				send_command_flag = 1;
+				case (buffer_change_step)
+					0:begin
+						command  = 8'h10;
+						buffer_change_step = 1;
+					end
+					1:begin
+						command  = 8'h00;
+						buffer_change_step = 2;
+					end
+					2:begin
+						command  = 8'hb0;
+						column_counter = 0;
+						buffer_change_step = 0;
+						column_counter = 0;
+						page_counter  = 0;	
+						ram_read_addr = 0;
+					end				
+				endcase
+				
+			end
+		end//else 
+	data_quantity = data_quantity + 1;
+	end
 	
 end
 

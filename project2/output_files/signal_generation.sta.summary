@@ -2,148 +2,220 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -13.988
-TNS   : -1102.221
-
 Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -5.039
-TNS   : -548.324
+Slack : -87.871
+TNS   : -2218.146
 
-Type  : Slow 1200mV 85C Model Setup 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : -4.555
-TNS   : -216.773
+Type  : Slow 1200mV 85C Model Setup 'lcd_control:lcd_control_instance|key_active'
+Slack : -9.061
+TNS   : -2149.456
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.362
-TNS   : -201.961
+Slack : -8.676
+TNS   : -821.015
+
+Type  : Slow 1200mV 85C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : -7.538
+TNS   : -718.698
+
+Type  : Slow 1200mV 85C Model Setup 'lcd_module:lcd_module_instance|iic_clk_out'
+Slack : -4.874
+TNS   : -258.866
+
+Type  : Slow 1200mV 85C Model Setup 'lcd_module:lcd_module_instance|key_active'
+Slack : -4.768
+TNS   : -36.677
+
+Type  : Slow 1200mV 85C Model Hold 'lcd_module:lcd_module_instance|iic_clk_out'
+Slack : 0.402
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : 0.435
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.437
+Slack : 0.436
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : 0.450
+Type  : Slow 1200mV 85C Model Hold 'lcd_control:lcd_control_instance|key_active'
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.625
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'lcd_module:lcd_module_instance|key_active'
+Slack : 0.455
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -152.358
+TNS   : -385.521
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lcd_control:lcd_control_instance|key_active'
+Slack : -1.487
+TNS   : -481.788
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.487
-TNS   : -492.197
+TNS   : -400.003
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.487
-TNS   : -230.485
+TNS   : -389.594
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|iic_clk_out'
 Slack : -1.487
-TNS   : -127.882
+TNS   : -142.752
 
-Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -12.951
-TNS   : -1011.554
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|key_active'
+Slack : -1.487
+TNS   : -13.383
 
 Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -4.651
-TNS   : -506.107
+Slack : -80.196
+TNS   : -2040.903
+
+Type  : Slow 1200mV 0C Model Setup 'lcd_control:lcd_control_instance|key_active'
+Slack : -8.456
+TNS   : -1987.209
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.076
-TNS   : -176.832
+Slack : -8.223
+TNS   : -759.077
+
+Type  : Slow 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : -6.813
+TNS   : -656.302
 
 Type  : Slow 1200mV 0C Model Setup 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : -4.050
-TNS   : -193.501
+Slack : -4.378
+TNS   : -230.877
+
+Type  : Slow 1200mV 0C Model Setup 'lcd_module:lcd_module_instance|key_active'
+Slack : -4.297
+TNS   : -33.788
 
 Type  : Slow 1200mV 0C Model Hold 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : 0.364
+Slack : 0.254
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : 0.384
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'lcd_control:lcd_control_instance|key_active'
+Slack : 0.384
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.386
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.677
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'lcd_module:lcd_module_instance|key_active'
+Slack : 0.404
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.201
-TNS   : -152.358
+TNS   : -385.521
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcd_control:lcd_control_instance|key_active'
+Slack : -1.487
+TNS   : -483.608
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.487
-TNS   : -492.197
+TNS   : -400.003
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.487
-TNS   : -230.485
+TNS   : -389.594
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|iic_clk_out'
 Slack : -1.487
-TNS   : -127.882
+TNS   : -142.840
 
-Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
-Slack : -5.484
-TNS   : -297.362
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|key_active'
+Slack : -1.487
+TNS   : -13.406
 
 Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : -1.612
-TNS   : -152.711
+Slack : -37.393
+TNS   : -832.896
 
-Type  : Fast 1200mV 0C Model Setup 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : -1.388
-TNS   : -48.164
+Type  : Fast 1200mV 0C Model Setup 'lcd_control:lcd_control_instance|key_active'
+Slack : -3.483
+TNS   : -753.739
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.323
-TNS   : -41.190
+Slack : -3.120
+TNS   : -244.787
+
+Type  : Fast 1200mV 0C Model Setup 'decrease_clock:decrease_clock_instance|clk_out'
+Slack : -2.726
+TNS   : -159.745
+
+Type  : Fast 1200mV 0C Model Setup 'lcd_module:lcd_module_instance|iic_clk_out'
+Slack : -1.499
+TNS   : -59.639
+
+Type  : Fast 1200mV 0C Model Setup 'lcd_module:lcd_module_instance|key_active'
+Slack : -1.460
+TNS   : -10.690
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.101
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'lcd_module:lcd_module_instance|iic_clk_out'
-Slack : 0.169
+Slack : 0.026
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out_high'
-Slack : 0.175
+Slack : 0.112
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'lcd_module:lcd_module_instance|iic_clk_out'
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : 0.178
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'lcd_control:lcd_control_instance|key_active'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'lcd_module:lcd_module_instance|key_active'
+Slack : 0.187
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -90.362
+TNS   : -215.348
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcd_control:lcd_control_instance|key_active'
+Slack : -1.000
+TNS   : -324.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out'
 Slack : -1.000
-TNS   : -331.000
+TNS   : -269.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'decrease_clock:decrease_clock_instance|clk_out_high'
 Slack : -1.000
-TNS   : -155.000
+TNS   : -262.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|iic_clk_out'
 Slack : -1.000
-TNS   : -86.000
+TNS   : -96.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lcd_module:lcd_module_instance|key_active'
+Slack : -1.000
+TNS   : -9.000
 
 ------------------------------------------------------------

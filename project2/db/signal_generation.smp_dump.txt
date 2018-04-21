@@ -1,11 +1,15 @@
 
-State Machine - |signal_generation|digitron_control:digitron_control_instance|FSM
-Name FSM.00011 FSM.00010 FSM.00001 FSM.00000 FSM.00100 
-FSM.00000 0 0 0 0 0 
-FSM.00001 0 0 1 1 0 
-FSM.00010 0 1 0 1 0 
-FSM.00011 1 0 0 1 0 
-FSM.00100 0 0 0 1 1 
+State Machine - |signal_generation|lcd_control:lcd_control_instance|step_tail
+Name step_tail.0000000000000000 step_tail.0000000000000010 step_tail.0000000000000001 
+step_tail.0000000000000000 0 0 0 
+step_tail.0000000000000001 1 0 1 
+step_tail.0000000000000010 1 1 0 
+
+State Machine - |signal_generation|lcd_control:lcd_control_instance|step_head
+Name step_head.0000000000000000 step_head.0000000000000010 step_head.0000000000000001 
+step_head.0000000000000000 0 0 0 
+step_head.0000000000000001 1 0 1 
+step_head.0000000000000010 1 1 0 
 
 State Machine - |signal_generation|lcd_module:lcd_module_instance|state
 Name state.00000011 state.00000010 state.00000001 state.00000000 state.00000100 

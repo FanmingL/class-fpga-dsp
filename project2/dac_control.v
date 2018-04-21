@@ -69,10 +69,7 @@ always @ (posedge clk_high)begin
 	if (show_flag)begin
 		number_on_digitron[15:0] = real_frequency;
 		point_position = 6'b000000;
-	end else begin
-		number_on_digitron[15:0] = step_test;
-		point_position = 6'b000100;
-	end
+	end 
 end
 
 always @ (negedge clk_high)begin
@@ -89,57 +86,58 @@ end
 always @ (posedge clk_high) begin
 	//number_on_digitron = real_frequency;
 	shank_position = (1<<set_number_index);
-	if (KEY_STATE[3])begin
-		if (!key_used[3])begin
-			key_used[3] = 1;
-			if (set_number_index == 5)begin
-				set_number_index = 0;
-			end else begin
-				set_number_index = set_number_index + 1;
-			end//if set_number_index == 5
-		end //if !key_used[3]
-	end else begin
-		key_used[3] = 0;
-	end //if KEY_STATE[3]
-	
-	if (KEY_STATE[2])begin
-		if (!key_used[2])begin
-			key_used[2] = 1;
-			if (set_number_index == 0)begin
-				set_number_index = 5;
-			end else begin
-				set_number_index = set_number_index - 1;
-			end//if set_number_index == 0
-		end //if !key_used[2]
-	end else begin
-		key_used[2] = 0;
-	end //if KEY_STATE[2]
-	
-	
-	if (KEY_STATE[0])begin
-		if (!key_used[0])begin
-			key_used[0] = 1;
-			if (real_frequency + exp_number[set_number_index]<=25000)begin
-				real_frequency = real_frequency + exp_number[set_number_index];
-				step_test = step_test + exp_number2[set_number_index];
-			end //<25000
-		end //if !key_used[0]
-	end else begin
-		key_used[0] = 0;
-	end //if KEY_STATE[0]
-	
-	if (KEY_STATE[1])begin
-		if (!key_used[1])begin
-			key_used[1] = 1;
-			if (real_frequency >= exp_number[set_number_index] && real_frequency > 50)begin
-				real_frequency = real_frequency - exp_number[set_number_index];
-				step_test = step_test - exp_number2[set_number_index];
-			end //>exp_number[set_number_index]
-		end //if !key_used[1]
-	end else begin
-		key_used[1] = 0;
-	end //if KEY_STATE[1]
-	
+	if (show_flag)begin
+		if (KEY_STATE[3])begin
+			if (!key_used[3])begin
+				key_used[3] = 1;
+				if (set_number_index == 5)begin
+					set_number_index = 0;
+				end else begin
+					set_number_index = set_number_index + 1;
+				end//if set_number_index == 5
+			end //if !key_used[3]
+		end else begin
+			key_used[3] = 0;
+		end //if KEY_STATE[3]
+		
+		if (KEY_STATE[2])begin
+			if (!key_used[2])begin
+				key_used[2] = 1;
+				if (set_number_index == 0)begin
+					set_number_index = 5;
+				end else begin
+					set_number_index = set_number_index - 1;
+				end//if set_number_index == 0
+			end //if !key_used[2]
+		end else begin
+			key_used[2] = 0;
+		end //if KEY_STATE[2]
+		
+		
+		if (KEY_STATE[0])begin
+			if (!key_used[0])begin
+				key_used[0] = 1;
+				if (real_frequency + exp_number[set_number_index]<=25000)begin
+					real_frequency = real_frequency + exp_number[set_number_index];
+					step_test = step_test + exp_number2[set_number_index];
+				end //<25000
+			end //if !key_used[0]
+		end else begin
+			key_used[0] = 0;
+		end //if KEY_STATE[0]
+		
+		if (KEY_STATE[1])begin
+			if (!key_used[1])begin
+				key_used[1] = 1;
+				if (real_frequency >= exp_number[set_number_index] && real_frequency > 50)begin
+					real_frequency = real_frequency - exp_number[set_number_index];
+					step_test = step_test - exp_number2[set_number_index];
+				end //>exp_number[set_number_index]
+			end //if !key_used[1]
+		end else begin
+			key_used[1] = 0;
+		end //if KEY_STATE[1]
+	end
 	if (KEY_STATE[4])begin
 		if (!key_used[4])begin
 			key_used[4] = 1;
