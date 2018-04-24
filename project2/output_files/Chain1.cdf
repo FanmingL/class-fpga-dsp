@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE15F17) Path("C:/altera/14.1/project2/output_files/") File("signal_generation.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE15F17) Path("C:/Users/erdou/Documents/github/class-fpga-dsp/project2/output_files/") File("signal_generation.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

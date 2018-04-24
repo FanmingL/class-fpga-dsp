@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at decrease_clock.v(18): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at decrease_clock.v(39): always construct contains both blocking and non-blocking assignments

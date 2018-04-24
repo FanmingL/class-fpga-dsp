@@ -109,4 +109,15 @@ set_global_assignment -name QIP_FILE img.qip
 set_global_assignment -name QIP_FILE img_buffer.qip
 set_global_assignment -name VERILOG_FILE lcd_control.v
 set_global_assignment -name QIP_FILE img_ram.qip
+set_location_assignment PIN_R14 -to ADC[0]
+set_location_assignment PIN_T12 -to ADC[7]
+set_location_assignment PIN_R11 -to ADC[6]
+set_location_assignment PIN_T13 -to ADC[5]
+set_location_assignment PIN_R12 -to ADC[4]
+set_location_assignment PIN_R13 -to ADC[2]
+set_location_assignment PIN_T15 -to ADC[1]
+set_global_assignment -name VERILOG_FILE adc_module.v
+set_global_assignment -name VERILOG_FILE adc_control.v
+set_location_assignment PIN_R10 -to ADC_clk
+set_location_assignment PIN_T14 -to ADC[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

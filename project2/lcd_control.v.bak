@@ -1,9 +1,0 @@
-module lcd_control(clk,
-						ram_write_data,
-						ram_write_addr,
-						ram_write_en
-						);
-input clk;
-output reg[7:0] ram_write_data;
-output reg ram_write_en;
-output reg[9:0]ram_write_data;
