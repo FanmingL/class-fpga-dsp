@@ -54,7 +54,7 @@ end
 
 always @ (posedge clk)begin
 
-	data_buffer[0] <= adc_in * ratio;
+	data_buffer[0] <= adc_in;
 	for (iter_count=1;iter_count<128;iter_count=iter_count + 1)begin
 		data_buffer[iter_count] <= data_buffer[iter_count - 1];
 	end

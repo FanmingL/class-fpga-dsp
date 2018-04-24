@@ -41,7 +41,6 @@ module signal_generation(
 	initial begin
 		beep <= 1;
 	end
-	assign dac_value = ADC_read;
 	//instantation of  modules
 	decrease_clock decrease_clock_instance(clk, clk_out, clk_out_high, system_time,system_time_10ms, clk_very_high, clk_very_high2); //50MHz, 1kHz 100kHz
 	key_module key_module_instance(clk_out, key, KEY_STATE);//UP,DOWN,LEFT,RIGHT,ENTER
@@ -61,7 +60,7 @@ module signal_generation(
 	lcd_control lcd_control_instance(clk,clk_out, ram_write_data,ram_write_addr,wren,KEY_STATE,
 	ram_write_data_tmp,ram_read_addr_tmp,ram_write_addr_tmp,wren_tmp,ram_read_data_tmp);
 	adc_module adc_module_instance(clk_very_high, ADC_clk, ADC, ADC_read);
-	//adc_control adc_control_instance(clk_very_high, clk_very_high2, ADC_read, number_on_digitron[7:0], dac_value);
+	adc_control adc_control_instance(clk_very_high, clk_very_high2, ADC_read, number_on_digitron[7:0], dac_value);
 
 
 
